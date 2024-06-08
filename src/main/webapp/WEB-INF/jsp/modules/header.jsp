@@ -55,8 +55,27 @@
         
         <link rel="stylesheet" href="<c:url value="/resources/assets/libs/jsvectormap/css/jsvectormap.min.css"/>">
         <link rel="stylesheet" href="<c:url value="/resources/assets/libs/swiper/swiper-bundle.min.css"/>">
-
-
+ <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .side-menu__item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        .side-menu__icon {
+            margin-right: 10px;
+        }
+        .sub-menu {
+            display: none;
+            list-style: none;
+            padding-left: 20px;
+        }
+        .sub-menu li {
+            margin-top: 5px;
+        }
+    </style>
     </head>
 
     <body class="">
@@ -140,6 +159,7 @@
 
 					</div>
 					<!-- End::main-header-container -->
+					
 
 				</header>
 					            <!-- End Main-Header -->
@@ -203,9 +223,21 @@
 									<span class="side-menu__label">Add Customer</span>
 								</a>
 							</li>
+						  <li class="slide has-sub">
+            <a href="addtype" class="side-menu__item" >
+                <i class="ri-inbox-line side-menu__icon"></i>
+                <span class="side-menu__label">Configuration</span>
+            </a>
+            </li>
+          
+        </li>
+
+    </ul>
+
+
 							<!-- End::slide -->
 
-						</ul>
+		
 						<div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24"
 								height="24" viewBox="0 0 24 24">
 								<path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
