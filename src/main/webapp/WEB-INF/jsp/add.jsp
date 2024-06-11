@@ -150,6 +150,8 @@
             </form>
         </div>
     </div>
+    
+    
      <div class="button-container">
         <button class="add-button" type="button" onclick="showForm()">
            <i class="fa fa-plus" aria-hidden="true"></i>
@@ -175,6 +177,8 @@
             </form>
         </div>
     </div>
+    
+   
      <div class="button-container">
         <button class="add-button" type="button" onclick="showForm()">
            <i class="fa fa-plus" aria-hidden="true"></i>
