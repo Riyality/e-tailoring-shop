@@ -50,4 +50,17 @@ public class HomeController {
 		response.put("receivedData", inputs);
 		return response;
 	}
+	
+	@PostMapping("/your-controller")
+    @ResponseBody
+    public Map<String, Object> handleData1(@RequestBody Map<String, List<String>> requestData) {
+        List<String> ptype = requestData.get("inputs");
+        System.out.println("Received inputs: " + ptype);
+        service.addpanttype(ptype);
+
+        Map<String, Object> response = new HashMap<>();
+        response.put("message", "Data received successfully");
+        response.put("receivedData", ptype);
+        return response;
+    }
 }

@@ -126,7 +126,7 @@
 </head>
 <body>
     <div class="button-container">
-        <button class="add-button" type="button" onclick="showForm()">
+        <button class="add-button" type="button" onclick="showPantTypePopup()">
            <i class="fa fa-plus" aria-hidden="true"></i>
         </button>
         <button class="view-button" type="button">
@@ -146,6 +146,22 @@
                     </div>
                 </div>
                 <button type="submit" class="submit-button">Save</button>
+                <div id="message" class="message">Succesfully added</div>
+            </form>
+        </div>
+    </div>
+    
+     <div id="form-modal-pant-type" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeForm()">&times;</span>
+            <form id="dynamic-form" onsubmit="handlePantTypeSubmit(event)">
+                <div id="input-container-pant-type">
+                    <div class="input-group">
+                        <input type="text" name="dynamicInput-pant-type">
+                        <button type="button" class="add-button" onclick="addInputForPantType()">+</button>
+                    </div>
+                </div>
+                <button type="submit" class="submit-button">Save Bag</button>
                 <div id="message" class="message">Succesfully added</div>
             </form>
         </div>
@@ -235,6 +251,9 @@
         function showForm() {
             document.getElementById('form-modal').style.display = 'block';
         }
+        function showPantTypePopup() {
+            document.getElementById('form-modal-pant-type').style.display = 'block';
+        }
 
         function closeForm() {
             document.getElementById('form-modal').style.display = 'none';
@@ -249,6 +268,16 @@
             `;
             container.appendChild(div);
         }
+        
+        function addInputForPantType() {
+            const container = document.getElementById('input-container-pant-type');
+            const div = document.createElement('div');
+            div.classList.add('input-group');
+            div.innerHTML = `
+                <input type="text" name="dynamicInput-pant-type">
+            `;
+            container.appendChild(div);
+        }
 
         async function handleSubmit(event) {
             event.preventDefault();
@@ -257,6 +286,35 @@
             
             try {
                 const response = await fetch('/your-controller-endpoint', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ inputs: data })
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    console.log('Success:', result);
+                    document.getElementById('message').style.display = 'block'; // Show success message
+                    setTimeout(() => {
+                        document.getElementById('message').style.display = 'none'; // Hide success message after 3 seconds
+                    }, 3000);
+                } else {
+                    console.error('Error:', response.statusText);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+        
+        async function handlePantTypeSubmit(event) {
+            event.preventDefault();
+            const inputs = document.querySelectorAll('input[name="dynamicInput-pant-type"]');
+            const data = Array.from(inputs).map(input => input.value);
+            console.log(data)
+            try {
+                const response = await fetch('/your-controller', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
