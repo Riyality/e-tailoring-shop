@@ -22,7 +22,8 @@
          <!-- Popper JS -->
          <script src="<c:url value="/resources/assets/libs/%40popperjs/core/umd/popper.min.js"/>"></script>
 
-         <!-- Bootstrap JS -->
+         <!-- Bootstrap JS --> 
+         
          <script src="<c:url value="/resources/assets/libs/bootstrap/js/bootstrap.bundle.min.js"/>"></script>
 
          <!-- Node Waves JS-->

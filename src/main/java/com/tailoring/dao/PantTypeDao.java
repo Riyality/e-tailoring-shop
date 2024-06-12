@@ -8,5 +8,7 @@ import com.tailoring.entity.PantType;
 
 @Repository
 public interface PantTypeDao extends CrudRepository<PantType, Integer>{
+	
+	
 
 }

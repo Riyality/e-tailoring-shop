@@ -46,9 +46,11 @@ public class HomeController {
 		service.add(inputs);
 
 		Map<String, Object> response = new HashMap<>();
-		response.put("message", "Data received successfully");
+		response.put("message", "Data received successfully ");
 		response.put("receivedData", inputs);
 		return response;
+		
+		
 	}
 	
 	@PostMapping("/your-controller")
@@ -61,6 +63,6 @@ public class HomeController {
         Map<String, Object> response = new HashMap<>();
         response.put("message", "Data received successfully");
         response.put("receivedData", ptype);
-        return response;
+        return response; 
     }
 }
