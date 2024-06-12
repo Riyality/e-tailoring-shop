@@ -30,7 +30,7 @@
 
          <!-- Simplebar JS -->
          <script src="<c:url value="/resources/assets/libs/simplebar/simplebar.min.js"/>"></script>
-         <link rel="modulepreload" href="<c:url value="/resources/assets/simplebar-B35Aj-bA.js"/>" />
+         <link rel="modulepreload" href="<c:url value="/resources/assets/simplebar-B35Aj-bA.js"" />
          <script type="module" src="<c:url value="/resources/assets/simplebar-B35Aj-bA.js"/>"></script>
          <!-- Color Picker JS -->
          <script src="<c:url value="/resources/assets/libs/%40simonwep/pickr/pickr.es5.min.js"/>"></script>
@@ -44,15 +44,16 @@
 
        
         <!-- Sticky JS -->
-        <script src="<c:url value="/resources/assets/sticky.js"/>"></script>
+        <script src="<c:url value="/resources/assets/sticky.js""></script>
 
         <!-- Custom-Switcher JS -->
-        <link rel="modulepreload" href="<c:url value="/resources/assets/custom-switcher-oPg2q12r.js"/>" />
-        <script type="module" src="<c:url value="/resources/assets/custom-switcher-oPg2q12r.js"/>"></script>
+        <link rel="modulepreload" href="<c:url value="/resources/assets/custom-switcher-oPg2q12r.js"" />
+        <script type="module" src="<c:url value="/resources/assets/custom-switcher-oPg2q12r.js""></script>
         <!-- APP JS-->
-		<link rel="modulepreload" href="<c:url value="/resources/assets/app-DhXvUdFt.js"/>" />
-		<script type="module" src="<c:url value="/resources/assets/app-DhXvUdFt.js"/>"></script>       
+		<link rel="modulepreload" href="<c:url value="/resources/assets/app-DhXvUdFt.js"" />
+		<script type="module" src="<c:url value="/resources/assets/app-DhXvUdFt.js""></script>       
         <!-- END SCRIPTS -->
+        
 
     </body> 
 
