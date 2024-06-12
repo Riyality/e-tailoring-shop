@@ -27,6 +27,8 @@ public class HomeService {
 			list.add(t);
 		}
 		dao.saveAll(list);
+		
+		
 
 	}
 

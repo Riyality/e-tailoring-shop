@@ -320,6 +320,8 @@
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({ inputs: data })
+                    
+                    
                 });
 
                 if (response.ok) {
