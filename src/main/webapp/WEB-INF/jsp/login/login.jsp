@@ -60,23 +60,30 @@
                             <div class="authentication-cover">
                                 <div class="aunthentication-cover-content">
                                     <p class="h4 fw-bold mb-2 text-center">Sign in</p>
-                                    <div class="row gy-3">
-                                        <div class="col-xl-12">
-                                            <label for="signup-Email" class="form-label text-default op=8">Email address</label>
-                                            <input type="text" class="form-control form-control-lg" id="signup-Email" placeholder="Email">
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <label class="form-label text-default d-block">password
-                                                <a href="https://laravelui.spruko.com/synto/reset" class="float-end text-success">Forget password ?</a>
-                                            </label>
-                                            <div class="input-group">
-                                                <input type="password" class="form-control form-control-lg" id="signup-password" placeholder="password">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12 d-grid mt-2">
-                                            <a href="/home" class="btn btn-lg btn-primary">Sign In</a>
-                                        </div>
+                                    <form action="/" method="post">
+	                                    <div class="row gy-3">
+	                                        <div class="col-xl-12">
+	                                            <label for="signup-Email" class="form-label text-default op=8">Email address</label>
+	                                            <input type="text" class="form-control form-control-lg" id="signup-Email" name="email" placeholder="Email">
+	                                        </div>
+	                                        <div class="col-xl-12">
+	                                            <label class="form-label text-default d-block">password
+	                                                <a href="https://laravelui.spruko.com/synto/reset" class="float-end text-success">Forget password ?</a>
+	                                            </label>
+	                                            <div class="input-group">
+	                                                <input type="password" class="form-control form-control-lg" id="signup-password" name="password" placeholder="password">
+	                                            </div>
+	                                        </div>
+	                                        <div class="col-xl-12 d-grid mt-2">
+	                                            <button type="submit" class="btn btn-lg btn-primary">Sign In</button>
+	                                        </div>
+	                                    </div>
+                                    </form>
+                                     <c:if test="${not empty error}">
+                                    <div class="alert alert-danger mt-3" role="alert">
+                                        ${error}
                                     </div>
+                                </c:if>
                                 </div>
                             </div>
                         </div>
