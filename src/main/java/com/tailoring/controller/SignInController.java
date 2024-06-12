@@ -29,7 +29,7 @@ public class SignInController {
 			model.addAttribute("error", "Invalid email or password! Please try again.");
 			return "login/login";
 		}
-
+ 
 	}
 }
 

@@ -22,7 +22,7 @@ public class SignInEntity {
 			this.email = email;
 			this.password = password;
 		}
-		
+		 
 		public int getId() {
 			return id;
 		}

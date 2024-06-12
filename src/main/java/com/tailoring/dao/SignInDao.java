@@ -10,3 +10,4 @@ public interface SignInDao extends JpaRepository<SignInEntity, Integer> {
 	
 	SignInEntity findByEmailAndPassword(String email, String password);
 }
+ 
