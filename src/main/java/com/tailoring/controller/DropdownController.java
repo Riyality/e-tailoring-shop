@@ -37,12 +37,7 @@ public class DropdownController {
 		response.put("message", "Data received successfully ");
 		response.put("receivedData", inputs);
 		return response;
-		
-		
-		
-		
-		
-	}
+		}
 	
 	
 
@@ -56,6 +51,33 @@ public class DropdownController {
 		Map<String, Object> response = new HashMap<>();
 		response.put("message", "Data received successfully");
 		response.put("receivedData", ptype);
+		return response;
+	}
+	
+	
+	@PostMapping("/pantpress")
+	@ResponseBody
+	public Map<String, Object> addPantpress(@RequestBody Map<String, List<String>> requestData) {
+		List<String> presstype = requestData.get("inputs");
+		System.out.println("Received inputs: " + presstype);
+		service.addPantpress(presstype);
+
+		Map<String, Object> response = new HashMap<>();
+		response.put("message", "Data received successfully");
+		response.put("receivedData", presstype);
+		return response;
+	}
+	
+	@PostMapping("/panttip")
+	@ResponseBody
+	public Map<String, Object> addPantTip(@RequestBody Map<String, List<String>> requestData) {
+		List<String> tiptype = requestData.get("inputs");
+		System.out.println("Received inputs: " + tiptype);
+		service.addPantTip(tiptype);
+
+		Map<String, Object> response = new HashMap<>();
+		response.put("message", "Data received successfully");
+		response.put("receivedData", tiptype);
 		return response;
 	}
 }

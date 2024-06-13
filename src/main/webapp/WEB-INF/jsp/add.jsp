@@ -7,7 +7,6 @@
     <title>Dynamic Forms</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-    
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
@@ -91,7 +90,7 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        #input-container, #input-container-pant-type, #input-container1, #input-container2, #input-container3 {
+        .input-container {
             margin-bottom: 10px;
         }
         .input-group {
@@ -141,22 +140,21 @@
 
     <div id="form-modal-pant-type" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeForm()">&times;</span>
+            <span class="close" onclick="closeForm('form-modal-pant-type')">&times;</span>
             <form id="dynamic-form-pant-type" onsubmit="handlePantTypeSubmit(event)">
-                <div id="input-container-pant-type">
+                <div id="input-container-pant-type" class="input-container">
                     <div class="input-group">
                         <input type="text" name="dynamicInput-pant-type">
                         <button type="button" class="add-button" onclick="addInputForPantType()">+</button>
                     </div>
                 </div>
-                <button type="submit" class="submit-button">Save Bag</button>
+                <button type="submit" class="submit-button">Save</button>
                 <div id="message-pant-type" class="message">Successfully added</div>
             </form>
         </div>
     </div>
-
     <div class="button-container">
-        <button class="add-button" type="button" onclick="showForm()">
+        <button class="add-button" type="button" onclick="showPantTipTypePopup()">
            <i class="fa fa-plus" aria-hidden="true"></i>
         </button>
         <button class="view-button" type="button">
@@ -165,24 +163,24 @@
         <h6>Pant tip Type</h6>
     </div>
 
-    <div id="form-modal" class="modal">
+    <div id="form-modal-pant-tip-type" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeForm()">&times;</span>
-            <form id="dynamic-form" onsubmit="handleSubmit(event)">
-                <div id="input-container1">
-                    <div class="input-group1">
-                        <input type="text" name="dynamicInput1">
-                        <button type="button" class="add-button" onclick="addInput()">+</button>
+            <span class="close" onclick="closeForm('form-modal-pant-tip-type')">&times;</span>
+            <form id="dynamic-form-pant-tip-type" onsubmit="handlePantTipTypeSubmit(event)">
+                <div id="input-container1" class="input-container">
+                    <div class="input-group">
+                        <input type="text" name="dynamicInput-pant-tip-type">
+                        <button type="button" class="add-button" onclick="addInputForPantTipType()">+</button>
                     </div>
                 </div>
                 <button type="submit" class="submit-button">Save</button>
-                <div id="message" class="message">Successfully added</div>
+                <div id="message-pant-tip-type" class="message">Successfully added</div>
             </form>
         </div>
     </div>
 
     <div class="button-container">
-        <button class="add-button" type="button" onclick="showForm()">
+        <button class="add-button" type="button" onclick="showPantPressTypePopup()">
            <i class="fa fa-plus" aria-hidden="true"></i>
         </button>
         <button class="view-button" type="button">
@@ -191,24 +189,24 @@
         <h6>Pant press Type</h6>
     </div>
 
-    <div id="form-modal" class="modal">
+    <div id="form-modal-pant-press-type" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeForm()">&times;</span>
-            <form id="dynamic-form" onsubmit="handleSubmit(event)">
-                <div id="input-container2">
-                    <div class="input-group2">
-                        <input type="text" name="dynamicInput2">
-                        <button type="button" class="add-button" onclick="addInput()">+</button>
+            <span class="close" onclick="closeForm('form-modal-pant-press-type')">&times;</span>
+            <form id="dynamic-form-pant-press-type" onsubmit="handlePantPressTypeSubmit(event)">
+                <div id="input-container-pant-press-type" class="input-container">
+                    <div class="input-group">
+                        <input type="text" name="dynamicInput-pant-press-type">
+                        <button type="button" class="add-button" onclick="addInputForPantPressType()">+</button>
                     </div>
                 </div>
                 <button type="submit" class="submit-button">Save</button>
-                <div id="message" class="message">Successfully added</div>
+                <div id="message-pant-press-type" class="message">Successfully added</div>
             </form>
         </div>
     </div>
 
     <div class="button-container">
-        <button class="add-button" type="button" onclick="showForm()">
+        <button class="add-button" type="button" onclick="showPocketTypePopup()">
            <i class="fa fa-plus" aria-hidden="true"></i>
         </button>
         <button class="view-button" type="button">
@@ -217,62 +215,78 @@
         <h6>Pocket Type</h6>
     </div>
 
-    <div id="form-modal" class="modal">
+    <div id="form-modal-pocket-type" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeForm()">&times;</span>
-            <form id="dynamic-form3" onsubmit="handleSubmit(event)">
-                <div id="input-container3">
-                    <div class="input-group3">
-                        <input type="text" name="dynamicInput3">
-                        <button type="button" class="add-button" onclick="addInput()">+</button>
+            <span class="close" onclick="closeForm('form-modal-pocket-type')">&times;</span>
+            <form id="dynamic-form-pocket-type" onsubmit="handlePocketTypeSubmit(event)">
+                <div id="input-container-pocket-type" class="input-container">
+                    <div class="input-group">
+                        <input type="text" name="dynamicInput-pocket-type">
+                        <button type="button" class="add-button" onclick="addInputForPocketType()">+</button>
                     </div>
                 </div>
                 <button type="submit" class="submit-button">Save</button>
-                <div id="message" class="message">Successfully added</div>
+                <div id="message-pocket-type" class="message">Successfully added</div>
             </form>
         </div>
     </div>
 
     <script>
-        function showForm() {
-            document.getElementById('form-modal').style.display = 'block';
+        function showForm(modalId) {
+            document.getElementById(modalId).style.display = 'block';
         }
+
+        function showPocketTypePopup() {
+            showForm('form-modal-pocket-type');
+        }
+
         function showPantTypePopup() {
-            document.getElementById('form-modal-pant-type').style.display = 'block';
+            showForm('form-modal-pant-type');
         }
 
-        function closeForm() {
-            document.getElementById('form-modal').style.display = 'none';
-            document.getElementById('form-modal-pant-type').style.display = 'none';
+        function showPantPressTypePopup() {
+            showForm('form-modal-pant-press-type');
         }
 
-        function addInput() {
-            const container = document.getElementById('input-container');
+        function showPantTipTypePopup() {
+            showForm('form-modal-pant-tip-type');
+        }
+
+        function closeForm(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+        
+        function addInput(containerId, inputName) {
+            const container = document.getElementById(containerId);
             const div = document.createElement('div');
             div.classList.add('input-group');
-            div.innerHTML = `
-                <input type="text" name="dynamicInput">
-            `;
+            div.innerHTML = `<input type="text" name="${inputName}">`;
             container.appendChild(div);
+        }
+
+        function addInputForPocketType() {
+            addInput('input-container-pocket-type', 'dynamicInput-pocket-type');
         }
 
         function addInputForPantType() {
-            const container = document.getElementById('input-container-pant-type');
-            const div = document.createElement('div');
-            div.classList.add('input-group');
-            div.innerHTML = `
-                <input type="text" name="dynamicInput-pant-type">
-            `;
-            container.appendChild(div);
+            addInput('input-container-pant-type', 'dynamicInput-pant-type');
+        }
+        
+        function addInputForPantPressType() {
+            addInput('input-container-pant-press-type', 'dynamicInput-pant-press-type');
         }
 
-        async function handleSubmit(event) {
+        function addInputForPantTipType() {
+            addInput('input-container1', 'dynamicInput-pant-tip-type');
+        }
+
+        async function handlePocketTypeSubmit(event) {
             event.preventDefault();
-            const inputs = document.querySelectorAll('input[name="dynamicInput"]');
+            const inputs = document.querySelectorAll('input[name="dynamicInput-pocket-type"]');
             const data = Array.from(inputs).map(input => input.value);
 
             try {
-                const response = await fetch('/your-controller-endpoint', {
+                const response = await fetch('/dropdowns/pockets', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -283,9 +297,9 @@
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message').style.display = 'block'; // Show success message
+                    document.getElementById('message-pocket-type').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message').style.display = 'none'; // Hide success message after 3 seconds
+                        document.getElementById('message-pocket-type').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -293,14 +307,13 @@
             } catch (error) {
                 console.error('Error:', error);
             }
-            
         }
 
         async function handlePantTypeSubmit(event) {
             event.preventDefault();
             const inputs = document.querySelectorAll('input[name="dynamicInput-pant-type"]');
             const data = Array.from(inputs).map(input => input.value);
-            console.log(data)
+            console.log(data);
             try {
                 const response = await fetch('/dropdowns/pants', {
                     method: 'POST',
@@ -313,9 +326,67 @@
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message-pant-type').style.display = 'block'; // Show success message
+                    document.getElementById('message-pant-type').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message-pant-type').style.display = 'none'; // Hide success message after 3 seconds
+                        document.getElementById('message-pant-type').style.display = 'none';
+                    }, 3000);
+                } else {
+                    console.error('Error:', response.statusText);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        async function handlePantPressTypeSubmit(event) {
+            event.preventDefault();
+            const inputs = document.querySelectorAll('input[name="dynamicInput-pant-press-type"]');
+            const data = Array.from(inputs).map(input => input.value);
+
+            try {
+                const response = await fetch('/dropdowns/pantpress', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ inputs: data })
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    console.log('Success:', result);
+                    document.getElementById('message-pant-press-type').style.display = 'block';
+                    setTimeout(() => {
+                        document.getElementById('message-pant-press-type').style.display = 'none';
+                    }, 3000);
+                } else {
+                    console.error('Error:', response.statusText);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+        
+        async function handlePantTipTypeSubmit(event) {
+            event.preventDefault();
+            const inputs = document.querySelectorAll('input[name="dynamicInput-pant-tip-type"]');
+            const data = Array.from(inputs).map(input => input.value);
+            console.log(data);
+            try {
+                const response = await fetch('/dropdowns/panttip', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ inputs: data })
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    console.log('Success:', result);
+                    document.getElementById('message-pant-tip-type').style.display = 'block';
+                    setTimeout(() => {
+                        document.getElementById('message-pant-tip-type').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -326,11 +397,12 @@
         }
 
         window.onclick = function(event) {
-            const modal = document.getElementById('form-modal');
-            const pantTypeModal = document.getElementById('form-modal-pant-type');
-            if (event.target == modal || event.target == pantTypeModal) {
-                closeForm();
-            }
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                    closeForm(modal.id);
+                }
+            });
         }
     </script>
     <jsp:include page="modules/footer.jsp" />
