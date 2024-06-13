@@ -7,9 +7,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name = "pocket_type")
-public class Tailoring {
+public class PocketType {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
@@ -17,15 +18,16 @@ public class Tailoring {
 	@Column(name = "type")
 	private String type;
 
-	public Tailoring(String type) {
+	public PocketType(String type) {
 		super();
 		this.type = type;
 	}
 
-	public Tailoring() {
+	public PocketType() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
+	
+	
 
 	public String getType() {
 		return type;
