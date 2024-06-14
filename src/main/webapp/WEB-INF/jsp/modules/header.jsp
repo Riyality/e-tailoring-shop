@@ -272,6 +272,30 @@
 						
 
 					</ul>
+					
+					
+					<li class="slide has-sub"><a href="javascript:void(0);"
+							class="side-menu__item"> <i
+								class="ri-inbox-line side-menu__icon"></i> <span
+								class="side-menu__label">Customer</span> <i
+								class="ri ri-arrow-right-s-line side-menu__angle"></i>
+						</a>
+							<ul class="slide-menu child1">
+								<li class="slide side-menu__label1"><a href="#">Add
+										Customer</a></li>
+								<li class="slide"><a href="#" class="side-menu__item">All
+										Customer</a></li>
+							</ul></li>
+						<!-- End::slide -->
+
+
+						<!-- Start::slide -->
+						<li class="slide has-sub"><a href="/customers/add_customer_form"
+							class="side-menu__item"> <i
+								class="ri-inbox-line side-menu__icon"></i> <span
+								class="side-menu__label">Add Customer</span>
+						</a></li>
+						
                    <li class="slide has-sub"><a href="dropdowns/add-dropdown"
 							class="side-menu__item"> <i
 								class="ri-inbox-line side-menu__icon"></i> <span
