@@ -257,7 +257,7 @@
 
 
 						<!-- Start::slide -->
-						<li class="slide has-sub"><a href="addCustomerForm"
+						<li class="slide has-sub"><a href="/customers/add_customer_form"
 							class="side-menu__item"> <i
 								class="ri-inbox-line side-menu__icon"></i> <span
 								class="side-menu__label">Add Customer</span>
