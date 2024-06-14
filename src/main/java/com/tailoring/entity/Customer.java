@@ -35,6 +35,8 @@ public class Customer {
 	public Customer() {
 		
 	}
+	
+	
 
 	public Customer(int id, String name, String address, String contact, int payment, int payment_pending,
 			int payment_paid) {

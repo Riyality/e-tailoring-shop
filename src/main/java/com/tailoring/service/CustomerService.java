@@ -12,12 +12,15 @@ public class CustomerService {
 	private CustomerDao dao;
 
 	public void addcustomerrecord(Customer c) {
-		dao.save(c);
+		dao.save(c);  
 		
-	}
+		
+		}
 	
 	
 
 
 	
 }
+
+

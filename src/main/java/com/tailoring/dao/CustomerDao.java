@@ -6,4 +6,6 @@ import com.tailoring.entity.Customer;
 
 public interface CustomerDao extends CrudRepository<Customer, Integer> {
 
+	
+	
 }
