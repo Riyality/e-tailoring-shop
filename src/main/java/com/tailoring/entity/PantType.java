@@ -18,8 +18,6 @@ public class PantType {
 	@Column(name = "ptype")
 	private String pantType;
 	
-	
-	
 
 	public int getId() {
 		return id;

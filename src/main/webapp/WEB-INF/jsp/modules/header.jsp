@@ -240,40 +240,46 @@
 						<li class="slide__category"><span class="category-name">Measurements</span></li>
 						<!-- End::slide__category -->
 
-						<!-- Start::slide -->
-						<li class="slide has-sub"><a href="javascript:void(0);"
+						
+
+
+						
+						
+					</ul>
+					
+					
+                    <li class="slide has-sub"><a href="javascript:void(0);"
 							class="side-menu__item"> <i
 								class="ri-inbox-line side-menu__icon"></i> <span
-								class="side-menu__label">Customer</span> <i
+								class="side-menu__label">Employee</span> <i
 								class="ri ri-arrow-right-s-line side-menu__angle"></i>
 						</a>
 							<ul class="slide-menu child1">
-								<li class="slide side-menu__label1"><a href="#">Add
-										Customer</a></li>
+								<li class="slide side-menu__label1"><a href="">Add
+										Employee</a></li>
 								<li class="slide"><a href="#" class="side-menu__item">All
-										Customer</a></li>
+										Employee</a></li>
 							</ul></li>
 						<!-- End::slide -->
 
 
 						<!-- Start::slide -->
-						<li class="slide has-sub"><a href="addCustomerForm"
+						<li class="slide has-sub"><a href="/employees/add-form"
 							class="side-menu__item"> <i
 								class="ri-inbox-line side-menu__icon"></i> <span
-								class="side-menu__label">Add Customer</span>
+								class="side-menu__label">Add Employee</span>
 						</a></li>
-						<li class="slide has-sub"><a href="dropdowns/add-dropdown"
+						
+
+					</ul>
+                   <li class="slide has-sub"><a href="dropdowns/add-dropdown"
 							class="side-menu__item"> <i
 								class="ri-inbox-line side-menu__icon"></i> <span
 								class="side-menu__label">Configuration</span>
 						</a></li>
 
 						</li>
-
-					</ul>
-					
-
-
+                   
 					<!-- End::slide -->
 
 
