@@ -1,4 +1,4 @@
-<jsp:include page="modules/header.jsp" />
+<jsp:include page="../modules/header.jsp" />
 
 
 <!-- Start::app-content -->
@@ -44,7 +44,7 @@
 					<div class="col-xl-6">
 						<div class="mb-3">
 							<label for="form-text" class="form-label">Join Date</label> 
-							<input type="date" class="form-control"  name="joindate" >
+							<input type="date" class="form-control"  name="joinDate" >
 						</div>
 					  </div>
 					  
@@ -55,12 +55,22 @@
 						</div>
 					  </div>
 					
-
-					 <div class="col-xl-6 mb-3">
+                   <div class="col-xl-6">
+									<div class="mb-6">
+										<label for="form-status" class="form-label">Status</label>
+										<select class="form-select" name="status">
+											<option value="active">Active</option>
+											<option value="inactive">Inactive</option>
+										</select>
+									</div>
+								</div>
+         
+    </div>     
+    
     <div class="row">
         <label class="form-label mb-1">Gender</label>
         
-        <div class="col-xl-4">
+        <div class="col-xl-3">
             <div class="form-check">
                 <input class="form-check-input" name="gender" type="radio" value="Male" id="genderMale">
                 <label class="form-check-label" for="genderMale">
@@ -68,7 +78,7 @@
                 </label>
             </div>
         </div>
-        <div class="col-xl-4">
+        <div class="col-xl-3">
             <div class="form-check">
                 <input class="form-check-input" name="gender" type="radio" value="Female" id="genderFemale">
                 <label class="form-check-label" for="genderFemale">
@@ -76,7 +86,7 @@
                 </label>
             </div>
         </div>
-        <div class="col-xl-4">
+        <div class="col-xl-3">
             <div class="form-check">
                 <input class="form-check-input" name="gender" type="radio" value="Other" id="genderOther">
                 <label class="form-check-label" for="genderOther">
@@ -84,8 +94,9 @@
                 </label>
             </div>
         </div>
-    </div> 
-</div>
+         
+     
+
 
 					  <div class="col-xl-12">
 						<button class="btn btn-primary" type="submit">Submit</button>
@@ -107,4 +118,4 @@
 
 
 
-<jsp:include page="modules/footer.jsp" />
+<jsp:include page="../modules/footer.jsp" />
