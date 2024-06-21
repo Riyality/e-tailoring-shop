@@ -83,6 +83,9 @@
 <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
 	rel="stylesheet">
 <style>
+.table{
+	margin-left:'200px !important';
+}
 .side-menu__item {
 	display: flex;
 	align-items: center;
@@ -244,6 +247,21 @@
 
 
 
+<<<<<<< HEAD
+=======
+						<!-- Start::slide -->
+						<li class="slide has-sub"><a href="/employees/add-form"
+							class="side-menu__item"> <i
+								class="ri-inbox-line side-menu__icon"></i> <span
+								class="side-menu__label">Add Employee</span>
+						</a></li>
+						<li class="slide has-sub"><a href="/employees/allemployee"
+							class="side-menu__item"> <i
+								class="ri-inbox-line side-menu__icon"></i> <span
+								class="side-menu__label">List Employee</span>
+						</a></li>
+						
+>>>>>>> 307d6c9ebc7341c1e5838142e42e2169082954fb
 
 					</ul>
 
