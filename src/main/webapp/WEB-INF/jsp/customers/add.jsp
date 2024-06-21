@@ -1,4 +1,4 @@
-<jsp:include page="modules/header.jsp" />
+<jsp:include page="../modules/header.jsp" />
 
 
 <!-- Start::app-content -->
@@ -88,4 +88,4 @@
 
 
 
-<jsp:include page="modules/footer.jsp" />
+<jsp:include page="../modules/footer.jsp" />
