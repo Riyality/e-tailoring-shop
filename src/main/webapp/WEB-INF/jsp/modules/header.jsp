@@ -229,7 +229,7 @@
 						<!-- End::slide__category -->
 
 						<!-- Start::slide -->
-						<li class="slide  has-sub"><a href="javascript:void(0);"
+						<li class="slide  has-sub"><a href="/home"
 							class="side-menu__item"> <i
 								class="ri-home-8-line side-menu__icon"></i> <span
 								class="side-menu__label">Dashboard</span>
