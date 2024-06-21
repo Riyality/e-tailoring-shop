@@ -29,7 +29,7 @@
 									value="${demo.id}" placeholder="Customer Id">
 											<label for="form-text" class="form-label">employee
 												Name</label> <input type="text" class="form-control" id="form-text"
-												name="name" value="${demo.name}" placeholder="Customer Name">
+												name="name" value="${demo.name}" >
 										</div>
 									</div>
 									
@@ -43,17 +43,17 @@
 												<div class="input-group-text">+91</div>
 												<input type="text" class="form-control" id="form-tex"
 													name="contact" value="${demo.contact}"
-													placeholder="Customer Contact">
+													placeholder="employee Contact">
 											</div>
 										</div>
 									</div>
 
 									<div class="col-xl-6">
 										<div class="mb-3">
-											<label for="form-text" class="form-label">employee
-												Address</label> <input type="text" class="form-control"
-												id="form-text" name="address" value="${demo.holiday}"
-												placeholder="Customer Address">
+											<label for="form-text" class="form-label">
+												holiday</label> <input type="text" class="form-control"
+												id="form-text" name="holiday" value="${demo.holiday}"
+												>
 										</div>
 									</div>
 									<div class="col-xl-6">
