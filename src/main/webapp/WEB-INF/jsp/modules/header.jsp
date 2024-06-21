@@ -269,6 +269,19 @@
 
 
 
+
+						</li>
+						
+						
+						 <li class="slide has-sub"><a href="/recipt/add_recipt"
+							class="side-menu__item"> <i
+								class="ri-inbox-line side-menu__icon"></i> <span
+								class="side-menu__label">Recipt</span>
+						</a></li>
+
+						</li>
+                   
+
 					</ul>
 
 
@@ -315,6 +328,7 @@
 					</a></li>
 
 					</li>
+
 
 					<!-- End::slide -->
 
