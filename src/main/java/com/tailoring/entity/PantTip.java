@@ -8,16 +8,15 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "pant_type")
-public class PantType {
-
+@Table(name = "pant_tip_type")
+public class PantTip {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
-
-	@Column(name = "ptype")
-	private String pantType;
+private int id;
 	
+	@Column(name = "tiptype")
+private String tiptype;
 
 	public int getId() {
 		return id;
@@ -27,23 +26,24 @@ public class PantType {
 		this.id = id;
 	}
 
-	public String getPantType() {
-		return pantType;
+	public String getTiptype() {
+		return tiptype;
 	}
 
-	public void setPantType(String pantType) {
-		this.pantType = pantType;
+	public void setTiptype(String tiptype) {
+		this.tiptype = tiptype;
 	}
 
-	public PantType(int id, String pantType) {
+	public PantTip(int id, String tiptype) {
 		super();
 		this.id = id;
-		this.pantType = pantType;
+		this.tiptype = tiptype;
 	}
 
-	public PantType() {
+	public PantTip() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
+	
+	
 }

@@ -25,8 +25,9 @@
 						</div>
 					  </div>
 					
-					  <div class="col-xl-6">
+					 <div class="col-xl-6">
 						<div class="mb-3">
+
 							<label for="form-text" class="form-label">Customer Contact</label> 
 							<input type="text" class="form-control" id="" name="contact" placeholder="Customer Address">
 						</div>
@@ -38,6 +39,12 @@
 							<div class="input-group">
 					            <div class="input-group-text">+91</div>
 					            <input type="text" class="form-control" id="form-tex" name="address" placeholder="Customer Contact">
+				
+				<label for="form-text" class="form-label">Customer Contact</label>
+							<div class="input-group">
+					            <div class="input-group-text">+91</div>
+					            <input type="text" class="form-control" id="form-tex" name="contact" placeholder="Customer Contact">
+
 					        </div>
 						</div>
 					  </div>
@@ -78,7 +85,22 @@
 					  
 					  
 					
-					  <!-- <div class="col-xl-6">
+
+
+					  
+					  
+					 
+					  
+					  
+					  
+					  
+					  
+					  
+					  
+					  
+					  
+					
+		  <!-- <div class="col-xl-6">
 						
 				        <div class="mb-3">
 				            <label class="form-label">Select Option</label>
