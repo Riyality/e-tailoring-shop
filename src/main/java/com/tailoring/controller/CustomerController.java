@@ -23,7 +23,6 @@ public class CustomerController {
 		
 	}
 	
-	
 	@PostMapping("/addCustomer")
 	public String addrecord(@ModelAttribute Customer customer ) {	
 		customerservice.addcustomerrecord(customer);
