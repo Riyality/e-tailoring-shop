@@ -1,57 +1,61 @@
 package com.tailoring.entity;
 
 import java.time.LocalDate;
-
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name="employee")
 public class Employee {
-	
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Id
-	@Column(name="id")
-	private int id;
-	
-	@Column(name="name")
-	private String name;
-	
-	@Column(name="contact")
-	private String contact;
-	
-	@Column(name="holiday")
-	private String holiday;
-	
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	@Column(name="joindate")
-	private LocalDate joindate;
-	
-	@Column(name="age")
-	private int age;
-	
-	@Column(name="gender")
-	private String gender;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private int id;
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "contact")
+    private String contact;
+
+    @Column(name = "holiday")
+    private String holiday;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Column(name = "joindate")
+    private LocalDate joinDate;
+
+    @Column(name = "age")
+    private int age;
+
+    @Column(name = "gender")
+    private String gender;
+    
+    @Column(name = "status")
+    private String status;
 
 	public Employee() {
 		super();
 	}
 
-	public Employee(int id, String name, String contact, String holiday, LocalDate joindate, int age, String gender) {
+	public Employee(int id, String name, String contact, String holiday, LocalDate joinDate, int age, String gender,
+			String status) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.contact = contact;
 		this.holiday = holiday;
-		this.joindate = joindate;
+		this.joinDate = joinDate;
 		this.age = age;
 		this.gender = gender;
+		this.status = status;
 	}
 
 	public int getId() {
@@ -86,12 +90,12 @@ public class Employee {
 		this.holiday = holiday;
 	}
 
-	public LocalDate getJoindate() {
-		return joindate;
+	public LocalDate getJoinDate() {
+		return joinDate;
 	}
 
-	public void setJoindate(LocalDate joindate) {
-		this.joindate = joindate;
+	public void setJoinDate(LocalDate joinDate) {
+		this.joinDate = joinDate;
 	}
 
 	public int getAge() {
@@ -109,9 +113,14 @@ public class Employee {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	
-	
-	
-	
 
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+    
+ 
 }

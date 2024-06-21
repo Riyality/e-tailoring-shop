@@ -27,18 +27,25 @@
 					
 					 <div class="col-xl-6">
 						<div class="mb-3">
-							<label for="form-text" class="form-label">Customer Contact</label>
-							<div class="input-group">
-					            <div class="input-group-text">+91</div>
-					            <input type="text" class="form-control" id="form-tex" name="contact" placeholder="Customer Contact">
-					        </div>
+
+							<label for="form-text" class="form-label">Customer Contact</label> 
+							<input type="text" class="form-control" id="" name="contact" placeholder="Customer Address">
 						</div>
 					  </div>
 					
-					   <div class="col-xl-6">
+					  <div class="col-xl-6">
 						<div class="mb-3">
-							<label for="form-text" class="form-label">Customer Address</label> 
-							<input type="text" class="form-control" id="" name="address" placeholder="Customer Payment">
+							<label for="form-text" class="form-label">Customer Address</label>
+							<div class="input-group">
+					            <div class="input-group-text">+91</div>
+					            <input type="text" class="form-control" id="form-tex" name="address" placeholder="Customer Contact">
+				
+				<label for="form-text" class="form-label">Customer Contact</label>
+							<div class="input-group">
+					            <div class="input-group-text">+91</div>
+					            <input type="text" class="form-control" id="form-tex" name="contact" placeholder="Customer Contact">
+
+					        </div>
 						</div>
 					  </div>
 					  
@@ -53,7 +60,7 @@
 					   <div class="col-xl-6">
 						<div class="mb-3">
 							<label for="form-text" class="form-label">Customer Payment_pending</label> 
-							<input type="text" class="form-control" id="" name="Payment_pending" placeholder="Customer Payment_pending">
+							<input type="text" class="form-control" id="" name="payment_paid" placeholder="Customer Payment_pending">
 						</div>
 					  </div>
 					  
@@ -62,7 +69,7 @@
 					   <div class="col-xl-6">
 						<div class="mb-3">
 							<label for="form-text" class="form-label"> payment_paid</label> 
-							<input type="text" class="form-control" id="" name="payment_paid" placeholder=" Customer payment_paid">
+							<input type="text" class="form-control" id="" name="payment_pending" placeholder=" Customer payment_paid">
 						</div>
 					  </div>
 					  
@@ -78,7 +85,21 @@
 					  
 					  
 					
-					  <!-- <div class="col-xl-6">
+
+					  
+					  
+					 
+					  
+					  
+					  
+					  
+					  
+					  
+					  
+					  
+					  
+					
+		  <!-- <div class="col-xl-6">
 						
 				        <div class="mb-3">
 				            <label class="form-label">Select Option</label>
@@ -137,9 +158,8 @@
 				        
 					  </div>
 					   -->
-					  
-					  
-					  
+			  
+					  				  
 					  <div class="col-xl-12">
 						<button class="btn btn-primary" type="submit">Submit</button>
 					  </div>
