@@ -13,43 +13,29 @@ public class CustomerService {
 	private CustomerDao customerdao;
 
 	public void addcustomerrecord(Customer customer) {
-		customerdao.save(customer);  	
-		
-		}
+		customer.setStatus("Active");
+		customerdao.save(customer);
+
+	}
 
 	public List<Customer> allcustomerrecord() {
-		return( List<Customer>) customerdao.findAll();
-		
-		
-		
+		return (List<Customer>) customerdao.findAll();
+
 	}
 
 	public void updatecustomerrecord(Customer customer) {
 		customerdao.save(customer);
-		
+
 	}
 
 	public void deletecustomerrecord(int id) {
 		customerdao.deleteById(id);
-		
-	}
 
+	}
 
 	public Customer findbyid(int id) {
 		return customerdao.findById(id).orElse(null);
-		
+
 	}
 
-
-
-
-
-
-
-	
 }
-
-
-
-
-

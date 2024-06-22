@@ -78,13 +78,17 @@
 										</div>
 									</div>
 
+
+
 									<div class="col-xl-6">
-										<div class="mb-3">
-											<label for="form-text" class="form-label">Customer
-												Payment Paid</label> <input type="text" class="form-control"
-												id="form-text" name="payment_paid"
-												value="${customer.payment_paid}"
-												placeholder="Customer Payment Paid">
+										<div class="mb-6">
+											<label for="form-status" class="form-label">Status</label> <select
+												class="form-select" name="status">
+												<option value="active"
+													${customer.status == 'active' ? 'selected' : ''}>Active</option>
+												<option value="inactive"
+													${customer.status == 'inactive' ? 'selected' : ''}>Inactive</option>
+											</select>
 										</div>
 									</div>
 

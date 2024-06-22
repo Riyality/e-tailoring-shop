@@ -82,33 +82,7 @@
 	href="<c:url value="/resources/assets/libs/swiper/swiper-bundle.min.css"/>">
 <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
 	rel="stylesheet">
-<style>
-.table {
-	margin-left: '200px !important';
-}
 
-.side-menu__item {
-	display: flex;
-	align-items: center;
-	padding: 10px;
-	text-decoration: none;
-	color: #333;
-}
-
-.side-menu__icon {
-	margin-right: 10px;
-}
-
-.sub-menu {
-	display: none;
-	list-style: none;
-	padding-left: 20px;
-}
-
-.sub-menu li {
-	margin-top: 5px;
-}
-</style>
 </head>
 
 <body class="">
@@ -248,7 +222,6 @@
 
 
 
-
 						<!-- Start::slide -->
 
 						<li class="slide has-sub"><a href="#" class="side-menu__item">
@@ -283,20 +256,6 @@
                    
 
 					</ul>
-
-
-
-
-
-					<!-- End::slide -->
-
-
-					<!-- Start::slide -->
-
-
-
-
-					<!-- End::slide -->
 
 
 					<!-- Start::slide -->

@@ -8,47 +8,49 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="customer")
+@Table(name = "customer")
 public class Customer {
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
-	@Column(name="id")
+	@Column(name = "id")
 	private int id;
-	
-	@Column(name="name")
-	private String name;
-	
-	@Column(name="address")
-	private String address;
-	
-	@Column(name="contact")
-	private String contact;
-	
-	@Column(name="payment")
-	private int payment;
-	
-	@Column(name=" payment_pending")
-	private int payment_pending;
-	
-	@Column(name=" payment_paid")
-	private int payment_paid;
-	
-	public Customer() {
-		
-	}
-	
-	
 
-	public Customer(int id, String name, String address, String contact, int payment, int payment_pending,
-			int payment_paid) {
+	@Column(name = "name")
+	private String name;
+
+	@Column(name = "contact")
+	private String contact;
+
+	@Column(name = "address")
+	private String address;
+
+	@Column(name = "payment")
+	private int payment;
+
+	@Column(name = " payment_paid")
+	private int payment_paid;
+
+	@Column(name = " payment_pending")
+	private int payment_pending;
+
+	@Column(name = "status")
+	private String status;
+
+	public Customer() {
+
+	}
+
+	public Customer(int id, String name, String contact, String address, int payment, int payment_paid,
+			int payment_pending, String status) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.address = address;
 		this.contact = contact;
+		this.address = address;
 		this.payment = payment;
-		this.payment_pending = payment_pending;
 		this.payment_paid = payment_paid;
+		this.payment_pending = payment_pending;
+		this.status = status;
 	}
 
 	public int getId() {
@@ -67,20 +69,20 @@ public class Customer {
 		this.name = name;
 	}
 
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
 	public String getContact() {
 		return contact;
 	}
 
 	public void setContact(String contact) {
 		this.contact = contact;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public int getPayment() {
@@ -91,6 +93,14 @@ public class Customer {
 		this.payment = payment;
 	}
 
+	public int getPayment_paid() {
+		return payment_paid;
+	}
+
+	public void setPayment_paid(int payment_paid) {
+		this.payment_paid = payment_paid;
+	}
+
 	public int getPayment_pending() {
 		return payment_pending;
 	}
@@ -99,15 +109,14 @@ public class Customer {
 		this.payment_pending = payment_pending;
 	}
 
-	public int getPayment_paid() {
-		return payment_paid;
+	public String getStatus() {
+		return status;
 	}
 
-	public void setPayment_paid(int payment_paid) {
-		this.payment_paid = payment_paid;
+	public void setStatus(String status) {
+		this.status = status;
 	}
-	
-	
+
 	
 
 }
