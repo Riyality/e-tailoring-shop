@@ -12,13 +12,14 @@ import com.tailoring.entity.ShirtDetailsEntity;
 
 @Service
 public class ShirtDetailsService {
-	
-	@Autowired
-	ShirtDetailsDao shirtDetailsDao;
-	
-	public void addShirtDetails(ShirtDetailsEntity shirtDetailsEntity) {
-			shirtDetailsDao.save(shirtDetailsEntity);
-	}
+
+    @Autowired
+    private ShirtDetailsDao shirtDetailsDao;
+
+    public void addShirtDetails(ShirtDetailsEntity shirtDetailsEntity) {
+        shirtDetailsDao.save(shirtDetailsEntity);
+    }
+
 	
 	public List<ShirtDetailsEntity> shirtDetails() {
 		return shirtDetailsDao.findAll();
