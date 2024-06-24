@@ -28,16 +28,13 @@ public class ShirtDetailsController {
     @Autowired
     private ShirtDetailsService shirtDetailsService;
 
-    @PostMapping("/addSDetails")
+    @PostMapping("/addSDetail")
     public String addShirtDetails(@ModelAttribute ShirtDetailsEntity shirtDetailsEntity, Model model) {
-       
         shirtDetailsEntity.setCustomerId(1);
-
         shirtDetailsService.addShirtDetails(shirtDetailsEntity);
-        
-        
         return "redirect:/success";
     }
+
 
 	
 	@GetMapping("shirtList")
