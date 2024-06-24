@@ -20,6 +20,7 @@ public class ShirtDetailsService {
         shirtDetailsDao.save(shirtDetailsEntity);
     }
 
+
 	
 	public List<ShirtDetailsEntity> shirtDetails() {
 		return shirtDetailsDao.findAll();

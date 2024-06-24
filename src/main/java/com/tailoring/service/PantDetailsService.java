@@ -18,8 +18,9 @@ public class PantDetailsService {
 	PantDetailsDao pantDetailsDao;
 	
 	public void addPantDetails(PantDetailsEntity pantDetailsEntity) {
-			pantDetailsDao.save(pantDetailsEntity);
+		pantDetailsDao.save(pantDetailsEntity);
 	}
+
 	
 	public List<PantDetailsEntity> pantDetails() {
 		return pantDetailsDao.findAll();
