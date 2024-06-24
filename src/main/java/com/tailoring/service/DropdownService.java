@@ -20,6 +20,10 @@ public class DropdownService {
 
     @Autowired
     private PantTypeDao pantTypeDao;
+    
+  /*  @Autowired
+    private PantTipTypeDao pantTipTypeDao;*/
+
 
     @Autowired
     private PocketTypeDao pocketTypeDao;
@@ -68,4 +72,26 @@ public class DropdownService {
 	        }
 	        panttiptypeDao.saveAll(list2);
 }
+	public List<PantType> getPantTypes() {
+	    return (List<PantType>) pantTypeDao.findAll();
+	}
+
+	 public List<PantTip> getPantTipTypes() {
+		
+	        return (List<PantTip>) panttiptypeDao.findAll();
+	    }
+	  
+	  public List<PantPress> getPantPressTypes() {
+	        return (List<PantPress>) pantpressDao.findAll();
+	    }
+
+	    public List<PocketType> getPocketTypes() {
+	        return (List<PocketType>) pocketTypeDao.findAll();
+	    }
+	    
+	    
+	
+
+	
+	
 }
