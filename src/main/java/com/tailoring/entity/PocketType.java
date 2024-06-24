@@ -15,7 +15,7 @@ public class PocketType {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
-	@Column(name = "type")
+	@Column(name = "pockettype")
 	private String type;
 
 	public PocketType(String type) {

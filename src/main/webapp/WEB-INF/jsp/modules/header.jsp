@@ -82,29 +82,7 @@
 	href="<c:url value="/resources/assets/libs/swiper/swiper-bundle.min.css"/>">
 <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
 	rel="stylesheet">
-<style>
-.side-menu__item {
-	display: flex;
-	align-items: center;
-	padding: 10px;
-	text-decoration: none;
-	color: #333;
-}
 
-.side-menu__icon {
-	margin-right: 10px;
-}
-
-.sub-menu {
-	display: none;
-	list-style: none;
-	padding-left: 20px;
-}
-
-.sub-menu li {
-	margin-top: 5px;
-}
-</style>
 </head>
 
 <body class="">
@@ -229,7 +207,7 @@
 						<!-- End::slide__category -->
 
 						<!-- Start::slide -->
-						<li class="slide  has-sub"><a href="javascript:void(0);"
+						<li class="slide  has-sub"><a href="/home"
 							class="side-menu__item"> <i
 								class="ri-home-8-line side-menu__icon"></i> <span
 								class="side-menu__label">Dashboard</span>
@@ -240,46 +218,77 @@
 						<li class="slide__category"><span class="category-name">Measurements</span></li>
 						<!-- End::slide__category -->
 
-						
 
 
-						
-						
-					</ul>
-					
-					
-                    <li class="slide has-sub"><a href="javascript:void(0);"
-							class="side-menu__item"> <i
-								class="ri-inbox-line side-menu__icon"></i> <span
-								class="side-menu__label">Employee</span> <i
-								class="ri ri-arrow-right-s-line side-menu__angle"></i>
-						</a>
-							<ul class="slide-menu child1">
-								<li class="slide side-menu__label1"><a href="">Add
-										Employee</a></li>
-								<li class="slide"><a href="#" class="side-menu__item">All
-										Employee</a></li>
-							</ul></li>
-						<!-- End::slide -->
 
 
 						<!-- Start::slide -->
+
+						<li class="slide has-sub"><a href="#" class="side-menu__item">
+								<i class="ri-inbox-line side-menu__icon"></i> <span
+								class="side-menu__label">Employee</span>
+						</a></li>
+
 						<li class="slide has-sub"><a href="/employees/add-form"
 							class="side-menu__item"> <i
 								class="ri-inbox-line side-menu__icon"></i> <span
 								class="side-menu__label">Add Employee</span>
 						</a></li>
-						
-
-					</ul>
-                   <li class="slide has-sub"><a href="dropdowns/add-dropdown"
+						<li class="slide has-sub"><a href="/employees/allemployee"
 							class="side-menu__item"> <i
 								class="ri-inbox-line side-menu__icon"></i> <span
-								class="side-menu__label">Configuration</span>
+								class="side-menu__label">All Employee</span>
+						</a></li>
+
+
+
+
+						</li>
+						
+						
+						 <li class="slide has-sub"><a href="/recipt/add_recipt"
+							class="side-menu__item"> <i
+								class="ri-inbox-line side-menu__icon"></i> <span
+								class="side-menu__label">Recipt</span>
 						</a></li>
 
 						</li>
                    
+
+					</ul>
+
+
+					<!-- Start::slide -->
+
+
+					<li class="slide has-sub"><a href="#" class="side-menu__item">
+							<i class="ri-inbox-line side-menu__icon"></i> <span
+							class="side-menu__label">Customer</span>
+					</a></li>
+
+
+					<li class="slide has-sub"><a
+						href="/customers/add_customer_form" class="side-menu__item"> <i
+							class="ri-inbox-line side-menu__icon"></i> <span
+							class="side-menu__label">Add Customer</span>
+					</a></li>
+
+					<li class="slide has-sub"><a href="/customers/allcustomer"
+						class="side-menu__item"> <i
+							class="ri-inbox-line side-menu__icon"></i> <span
+							class="side-menu__label">All Customer</span>
+					</a></li>
+
+
+					<li class="slide has-sub"><a href="/dropdowns/add-dropdown"
+						class="side-menu__item"> <i
+							class="ri-inbox-line side-menu__icon"></i> <span
+							class="side-menu__label">Configuration</span>
+					</a></li>
+
+					</li>
+
+
 					<!-- End::slide -->
 
 
