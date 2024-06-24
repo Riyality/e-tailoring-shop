@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.tailoring.entity.PantPress;
+import com.tailoring.entity.PantTip;
+import com.tailoring.entity.PantType;
+import com.tailoring.entity.PocketType;
 import com.tailoring.service.DropdownService;
 
 @Controller
@@ -80,4 +84,32 @@ public class DropdownController {
 		response.put("receivedData", tiptype);
 		return response;
 	}
+	@GetMapping("/pant-types")
+	@ResponseBody
+	public List<PantType> getPantTypes() {
+	    return service.getPantTypes();
+	}
+	
+	 @GetMapping("/pant-tip-types")
+	    @ResponseBody
+	    public List<PantTip> getPantTipTypes() {
+		  System.out.println("1234"+service.getPantTipTypes());
+	        return service.getPantTipTypes();
+	    }
+	 
+	 @GetMapping("/pant-press-types")
+	    @ResponseBody
+	    public List<PantPress> getPantPressTypes() {
+	        return service.getPantPressTypes();
+	    }
+
+	    @GetMapping("/pocket-types")
+	    @ResponseBody
+	    public List<PocketType> getPocketTypes() {
+	        return service.getPocketTypes();
+	    }
+	
+
+	
+	
 }
