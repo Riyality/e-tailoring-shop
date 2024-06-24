@@ -8,12 +8,14 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 <div class="container mt-3">
-    <h2>Table</h2>
+<br>
+   <h4>All Employee</h4> 
 
-    <table class="table" style="margin-left:151px" table-dark>
+<h4>All Employee</h4>
+
+    <table class="table" style="margin-left:151px" >
         <thead>
             <tr>
-               
                 <th>Name</th>
                 <th>Contact</th>
                 <th>Holiday</th>
