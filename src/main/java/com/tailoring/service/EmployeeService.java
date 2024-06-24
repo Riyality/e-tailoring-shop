@@ -15,6 +15,7 @@ public class EmployeeService {
     private EmployeeDao employeeDao;
 
     public void add(Employee employee) {
+    	employee.setStatus("Active");
         employeeDao.save(employee);
     }
 

@@ -34,16 +34,9 @@
                     <td>${emp.joinDate}</td>
                     <td>${emp.age}</td>
                     <td>${emp.gender}</td>
-                    <td>
-                        <c:choose>
-                            <c:when test="${emp.status == 'active' }">
-                                Active
-                            </c:when>
-                            <c:otherwise>
-                                Inactive
-                            </c:otherwise>
-                        </c:choose>
-                    </td>
+                    <td>${emp.status } </td>
+                    
+                    
                     <td>
                         <a href="${pageContext.request.contextPath}/employees/update-form?id=${emp.id}" title="Update">
                             <i class="fas fa-pencil-alt"></i>
