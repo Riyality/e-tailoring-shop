@@ -13,19 +13,19 @@
 			<div class="col-xl-12">
 				<div class="card custom-card">
 					<div class="card-header justify-content-between">
-						<div class="card-title">Add Employee</div>
+						<div class="card-title"><h4>Add Employee</h4></div>
 					</div>
 					<div class="card-body">
 					<form action="/employees/add" method="post">
 					<div class="row">
-					
+				
 					  <div class="col-xl-6">
 						<div class="mb-3">
 							<label for="form-text" class="form-label">Name</label> 
 							<input type="text" class="form-control"  name="name" >
 						</div>
 					  </div>
-					
+				
 					  <div class="col-xl-6">
 						<div class="mb-3">
 							<label for="form-text" class="form-label">Contact</label> 
@@ -61,13 +61,13 @@
 											<label for="form-text" class="form-label">Gender</label> <select
 												class="form-select" name="gender">
 												<option value="Male"  name="gender" >Male</option>
-												<option  value="Female"  name="gender" >Female</option>
+												<option  value="Female" name="gender" >Female</option>
 												<option  value="Other"  name="gender" >Other</option>
 											</select>
 										</div>
 									</div>
 
-
+                 </div>
 
 
 									<div class="col-xl-12">
