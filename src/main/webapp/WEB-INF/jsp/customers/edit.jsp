@@ -16,8 +16,6 @@
 				<div class="card custom-card">
 					<div class="card-header justify-content-between">
 						<div class="card-title">Update Customer</div>
-					</div>
-
 
 					<div class="card-body">
 						<form action="/customers/updatecustomer" method="post">
@@ -63,7 +61,21 @@
 											id="form-text" name="payment" value="${customer.payment}"
 											placeholder="Customer Payment">
 									</div>
+
+									
+									<div class="col-xl-6">
+										<div class="mb-3">
+											<label for="form-text" class="form-label">Customer
+												Payment Paid</label> <input type="text" class="form-control"
+												id="form-text" name="payment_paid"
+												value="${customer.payment_paid}"
+												placeholder="Customer Payment Paid">
+										</div>
+									</div>
+									
+
 								</div>
+
 
 								<div class="col-xl-6">
 									<div class="mb-3">
@@ -75,18 +87,7 @@
 									</div>
 								</div>
 								
-								<div class="col-xl-6">
-									<div class="mb-3">
-										<label for="form-text" class="form-label">Customer
-											Payment paid</label> <input type="text" class="form-control"
-											id="form-text" name="payment_pending"
-											value="${customer.payment_paid}"
-											placeholder="Customer Payment Pending">
-									</div>
-								</div>
-
-
-
+							
 								<div class="col-xl-6">
 									<div class="mb-6">
 										<label for="form-status" class="form-label">Status</label> <select

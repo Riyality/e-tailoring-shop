@@ -53,6 +53,14 @@
 											name="payment" placeholder="Customer Payment">
 									</div>
 								</div>
+								
+								<div class="col-xl-6">
+									<div class="mb-3">
+										<label for="form-text" class="form-label">
+											payment_paid</label> <input type="text" class="form-control" id=""
+											name="payment_paid" placeholder=" Customer payment_paid">
+									</div>
+								</div>
 
 
 								<div class="col-xl-6">
@@ -62,17 +70,6 @@
 											name="Payment_pending" placeholder="Customer Payment_pending">
 									</div>
 								</div>
-
-
-
-								<div class="col-xl-6">
-									<div class="mb-3">
-										<label for="form-text" class="form-label">
-											payment_paid</label> <input type="text" class="form-control" id=""
-											name="payment_paid" placeholder=" Customer payment_paid">
-									</div>
-								</div>
-
 
 
 
