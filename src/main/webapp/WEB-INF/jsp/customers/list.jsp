@@ -21,8 +21,6 @@
 	<h4>All customer</h4>
 	<br>
 
-
-
 	<table class="table">
 		<thead>
 			<tr>

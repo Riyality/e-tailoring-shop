@@ -7,27 +7,35 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.tailoring.entity.Employee;
 import com.tailoring.entity.PantDetailsEntity;
 import com.tailoring.entity.ShirtDetailsEntity;
 import com.tailoring.service.ShirtDetailsService;
 
-@RestController
-public class ShirtDetailsController {
-	
-	@Autowired
-	ShirtDetailsService shirtDetailsService;
 
-	@PostMapping("addSDetails")
-	public String addShirtDetails(@RequestBody ShirtDetailsEntity shirtDetailsEntity) {
-			shirtDetailsService.addShirtDetails(shirtDetailsEntity);
-			
-			return"Success....";
-	}
+
+@Controller
+@RequestMapping("/recipts")
+public class ShirtDetailsController {
+
+    @Autowired
+    private ShirtDetailsService shirtDetailsService;
+
+    @PostMapping("/addSDetail")
+    public String addShirtDetails(@ModelAttribute ShirtDetailsEntity shirtDetailsEntity, Model model) {
+        shirtDetailsEntity.setCustomerId(1);
+        shirtDetailsService.addShirtDetails(shirtDetailsEntity);
+        return "redirect:/success";
+    }
+
+
 	
 	@GetMapping("shirtList")
 	public List<ShirtDetailsEntity> shirtDetails(Model model) {

@@ -8,12 +8,14 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 <div class="container mt-3">
-    <h2>Table</h2>
 
-    <table class="table" style="margin-left:151px" table-dark>
+   <h4>All Employee</h4> 
+
+
+
+    <table class="table" style="margin-left:151px" >
         <thead>
             <tr>
-               
                 <th>Name</th>
                 <th>Contact</th>
                 <th>Holiday</th>
@@ -34,16 +36,9 @@
                     <td>${emp.joinDate}</td>
                     <td>${emp.age}</td>
                     <td>${emp.gender}</td>
-                    <td>
-                        <c:choose>
-                            <c:when test="${emp.status == 'active' }">
-                                Active
-                            </c:when>
-                            <c:otherwise>
-                                Inactive
-                            </c:otherwise>
-                        </c:choose>
-                    </td>
+                    <td>${emp.status } </td>
+                    
+                    
                     <td>
                         <a href="${pageContext.request.contextPath}/employees/update-form?id=${emp.id}" title="Update">
                             <i class="fas fa-pencil-alt"></i>

@@ -82,6 +82,17 @@
 	href="<c:url value="/resources/assets/libs/swiper/swiper-bundle.min.css"/>">
 <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
 	rel="stylesheet">
+	<style>
+.sub-menu {
+    display: none; 
+}
+
+.sub-menu.show {
+    display: block; 
+}
+
+	
+	</style>
 
 </head>
 
@@ -224,41 +235,37 @@
 
 						<!-- Start::slide -->
 
-						<li class="slide has-sub"><a href="#" class="side-menu__item">
-								<i class="ri-inbox-line side-menu__icon"></i> <span
-								class="side-menu__label">Employee</span>
-						</a></li>
+						<li class="slide has-sub">
+    <a href="#" class="side-menu__item" onclick="toggleSubMenu(event)">
+        <i class="ri-inbox-line side-menu__icon"></i>
+        <span class="side-menu__label">Employee</span>
+    </a>
+    <ul class="sub-menu">
+        <li>
+            <a href="/employees/add-form" class="side-menu__item">
+                <i class="ri-add-line side-menu__icon"></i>
+                <span class="side-menu__label">Add Employee</span>
+            </a>
+        </li>
+        <li>
+            <a href="/employees/allemployee" class="side-menu__item">
+                <i class="ri-eye-line side-menu__icon"></i>
+                <span class="side-menu__label">All Employee</span>
+            </a>
+        </li>
+    </ul>
+</li>
 
-						<li class="slide has-sub"><a href="/employees/add-form"
-							class="side-menu__item"> <i
-								class="ri-inbox-line side-menu__icon"></i> <span
-								class="side-menu__label">Add Employee</span>
-						</a></li>
-						<li class="slide has-sub"><a href="/employees/allemployee"
-							class="side-menu__item"> <i
-								class="ri-inbox-line side-menu__icon"></i> <span
-								class="side-menu__label">All Employee</span>
-						</a></li>
 
-
-
-
-						</li>
-						
-						
-						 <li class="slide has-sub"><a href="/recipt/add_recipt"
+						<li class="slide has-sub"><a href="/recipt/add_recipt"
 							class="side-menu__item"> <i
 								class="ri-inbox-line side-menu__icon"></i> <span
 								class="side-menu__label">Recipt</span>
 						</a></li>
 
-						</li>
-                   
-
-					</ul>
 
 
-					<!-- Start::slide -->
+						<!-- Start::slide -->
 
 
 					<li class="slide has-sub"><a href="#" class="side-menu__item">
@@ -300,10 +307,27 @@
 							</svg>
 					</div>
 				</nav>
+				<script>
+				function toggleSubMenu(event) {
+				    event.preventDefault();
+
+				    
+				    const target = event.target.closest('.side-menu__item');
+				    if (target && !target.closest('.sub-menu')) {
+				        const submenu = target.nextElementSibling;
+				        if (submenu) {
+				            submenu.classList.toggle('show'); 
+				        }
+				    }
+				}
+
+</script>
+				
 				<!-- End::nav -->
 
 			</div>
 			<!-- End::main-sidebar -->
 
 		</aside>
+		
 		<!-- End Main-Sidebar-->
