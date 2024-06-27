@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -34,7 +35,9 @@ public class ShirtDetailsEntity {
 	public String shirtLoose;
 	public String shirtPress;
 	public String shirtOther;
-	public int customerId;
+	@OneToOne
+	@JoinColumn( name = "customer", referencedColumnName = "id" )
+	public Customer customer;
 
 	@OneToOne( mappedBy = "shirtDetailsEntity" )
 	private Receipt receipt;

@@ -22,6 +22,10 @@ public class ReceiptContainer {
 
 	private int customerId;
 
+	private String name;
+
+	private String address;
+
 	private String status;
 
 	private ShirtDetailsEntity shirtDetails;

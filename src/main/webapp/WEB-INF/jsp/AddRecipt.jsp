@@ -52,7 +52,7 @@
 									<div class="mb-3">
 										<label for="recipt-no" class="form-label">Receipt No:</label>
 										<input type="text" class="form-control" id="recipt-no"
-											name="recipt-no" placeholder="Receipt number">
+											name="recipt-no" placeholder="Receipt number" readonly="readonly" value="${receiptMaxId }">
 									</div>
 								</div>
 								<div class="col-xl-6">
@@ -80,21 +80,24 @@
 									<div class="mb-3">
 										<label for="name" class="form-label">Name:</label> <input
 											type="text" class="form-control" id="name" name="name"
-											placeholder="Name">
+											placeholder="Name" value="${customer.name }">
+											<input
+											type="hidden" class="form-control" id="customerId" name="customerId"
+											placeholder="Phone No" value="${customer.id }">
 									</div>
 								</div>
 								<div class="col-xl-4">
 									<div class="mb-3">
 										<label for="address" class="form-label">Address:</label> <input
 											type="text" class="form-control" id="address" name="address"
-											placeholder="Address">
+											placeholder="Address" value="${customer.address }">
 									</div>
 								</div>
 								<div class="col-xl-4">
 									<div class="mb-3">
 										<label for="phone" class="form-label">Phone No:</label> <input
 											type="text" class="form-control" id="phone" name="contact"
-											placeholder="Phone No">
+											placeholder="Phone No" value="${customer.contact }">
 									</div>
 								</div>
 							</div>

@@ -41,11 +41,11 @@ public class Receipt {
 	private String status;
 
 	@OneToOne( cascade = CascadeType.ALL )
-	@JoinColumn( name = "shirt_id", referencedColumnName = "id" )
+	@JoinColumn( name = "shirt", referencedColumnName = "id" )
 	private ShirtDetailsEntity shirtDetailsEntity;
 
 	@OneToOne( cascade = CascadeType.ALL )
-	@JoinColumn( name = "pant_id", referencedColumnName = "id" )
+	@JoinColumn( name = "pant", referencedColumnName = "id" )
 	private PantDetailsEntity pantDetailsEntity;
 
 }

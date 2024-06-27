@@ -82,17 +82,15 @@
 	href="<c:url value="/resources/assets/libs/swiper/swiper-bundle.min.css"/>">
 <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
 	rel="stylesheet">
-	<style>
+<style>
 .sub-menu {
-    display: none; 
+	display: none;
 }
 
 .sub-menu.show {
-    display: block; 
+	display: block;
 }
-
-	
-	</style>
+</style>
 
 </head>
 
@@ -153,7 +151,17 @@
 						<!-- End::header-link -->
 					</div>
 					<!-- End::header-element -->
-
+					<div class="header-element">
+						<!-- Start::header-link -->
+						<div class="">
+							<form action="/recipt/add_recipt">
+							<input type="text" placeholder="e.g 8080851891" name="contact">
+							<input type="submit" value="search">
+							</form>
+						</div>
+						<!-- <a aria-label="Hide Sidebar" class="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle" data-bs-toggle="sidebar" href="javascript:void(0);"><span></span></a> -->
+						<!-- End::header-link -->
+					</div>
 
 				</div>
 				<!-- End::header-content-left -->
@@ -235,26 +243,22 @@
 
 						<!-- Start::slide -->
 
-						<li class="slide has-sub">
-    <a href="#" class="side-menu__item" onclick="toggleSubMenu(event)">
-        <i class="ri-inbox-line side-menu__icon"></i>
-        <span class="side-menu__label">Employee</span>
-    </a>
-    <ul class="sub-menu">
-        <li>
-            <a href="/employees/add-form" class="side-menu__item">
-                <i class="ri-add-line side-menu__icon"></i>
-                <span class="side-menu__label">Add Employee</span>
-            </a>
-        </li>
-        <li>
-            <a href="/employees/allemployee" class="side-menu__item">
-                <i class="ri-eye-line side-menu__icon"></i>
-                <span class="side-menu__label">All Employee</span>
-            </a>
-        </li>
-    </ul>
-</li>
+						<li class="slide has-sub"><a href="#" class="side-menu__item"
+							onclick="toggleSubMenu(event)"> <i
+								class="ri-inbox-line side-menu__icon"></i> <span
+								class="side-menu__label">Employee</span>
+						</a>
+							<ul class="sub-menu">
+								<li><a href="/employees/add-form" class="side-menu__item">
+										<i class="ri-add-line side-menu__icon"></i> <span
+										class="side-menu__label">Add Employee</span>
+								</a></li>
+								<li><a href="/employees/allemployee"
+									class="side-menu__item"> <i
+										class="ri-eye-line side-menu__icon"></i> <span
+										class="side-menu__label">All Employee</span>
+								</a></li>
+							</ul></li>
 
 
 						<li class="slide has-sub"><a href="/recipt/add_recipt"
@@ -268,66 +272,64 @@
 						<!-- Start::slide -->
 
 
-					<li class="slide has-sub"><a href="#" class="side-menu__item">
-							<i class="ri-inbox-line side-menu__icon"></i> <span
-							class="side-menu__label">Customer</span>
-					</a></li>
+						<li class="slide has-sub"><a href="#" class="side-menu__item">
+								<i class="ri-inbox-line side-menu__icon"></i> <span
+								class="side-menu__label">Customer</span>
+						</a></li>
 
 
-					<li class="slide has-sub"><a
-						href="/customers/add_customer_form" class="side-menu__item"> <i
-							class="ri-inbox-line side-menu__icon"></i> <span
-							class="side-menu__label">Add Customer</span>
-					</a></li>
+						<li class="slide has-sub"><a
+							href="/customers/add_customer_form" class="side-menu__item">
+								<i class="ri-inbox-line side-menu__icon"></i> <span
+								class="side-menu__label">Add Customer</span>
+						</a></li>
 
-					<li class="slide has-sub"><a href="/customers/allcustomer"
-						class="side-menu__item"> <i
-							class="ri-inbox-line side-menu__icon"></i> <span
-							class="side-menu__label">All Customer</span>
-					</a></li>
-
-
-					<li class="slide has-sub"><a href="/dropdowns/add-dropdown"
-						class="side-menu__item"> <i
-							class="ri-inbox-line side-menu__icon"></i> <span
-							class="side-menu__label">Configuration</span>
-					</a></li>
-
-					</li>
+						<li class="slide has-sub"><a href="/customers/allcustomer"
+							class="side-menu__item"> <i
+								class="ri-inbox-line side-menu__icon"></i> <span
+								class="side-menu__label">All Customer</span>
+						</a></li>
 
 
-					<!-- End::slide -->
+						<li class="slide has-sub"><a href="/dropdowns/add-dropdown"
+							class="side-menu__item"> <i
+								class="ri-inbox-line side-menu__icon"></i> <span
+								class="side-menu__label">Configuration</span>
+						</a></li>
+
+						</li>
 
 
-					<div class="slide-right" id="slide-right">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24"
-							height="24" viewBox="0 0 24 24">
+						<!-- End::slide -->
+
+
+						<div class="slide-right" id="slide-right">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24"
+								height="24" viewBox="0 0 24 24">
 								<path
-								d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+									d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
 							</svg>
-					</div>
+						</div>
 				</nav>
 				<script>
-				function toggleSubMenu(event) {
-				    event.preventDefault();
+					function toggleSubMenu(event) {
+						event.preventDefault();
 
-				    
-				    const target = event.target.closest('.side-menu__item');
-				    if (target && !target.closest('.sub-menu')) {
-				        const submenu = target.nextElementSibling;
-				        if (submenu) {
-				            submenu.classList.toggle('show'); 
-				        }
-				    }
-				}
+						const target = event.target.closest('.side-menu__item');
+						if (target && !target.closest('.sub-menu')) {
+							const submenu = target.nextElementSibling;
+							if (submenu) {
+								submenu.classList.toggle('show');
+							}
+						}
+					}
+				</script>
 
-</script>
-				
 				<!-- End::nav -->
 
 			</div>
 			<!-- End::main-sidebar -->
 
 		</aside>
-		
+
 		<!-- End Main-Sidebar-->
