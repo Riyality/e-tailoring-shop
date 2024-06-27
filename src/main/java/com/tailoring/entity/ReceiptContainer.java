@@ -28,6 +28,8 @@ public class ReceiptContainer {
 
 	private String status;
 
+	private Float amount;
+
 	private ShirtDetailsEntity shirtDetails;
 	private PantDetailsEntity pantDetails;
 }
