@@ -18,19 +18,34 @@ public class ReciptService {
 	@Autowired
 	private CustomerDao customerDao;
 
-	public boolean addReceipt( ReceiptContainer receipt ) {
+	public ReceiptContainer addReceipt( ReceiptContainer receipt ) {
 		Receipt entity = new Receipt();
 		entity.setCurrentDate( receipt.getCurrentDate() );
 		entity.setDeliveryDate( receipt.getDeliveryDate() );
 		Customer customer = customerDao.findById( receipt.getCustomerId() ).get();
 		entity.setCustomer( customer );
-		receipt.setStatus( "Pending" );
-		customer.setStatus("Pending");
+		entity.setStatus( "Pending" );
+		customer.setStatus( "Pending" );
 		entity.setPantDetailsEntity( receipt.getPantDetails() );
 		entity.setShirtDetailsEntity( receipt.getShirtDetails() );
-		entity.getPantDetailsEntity().setCustomerId( 1 );
-		entity.getPantDetailsEntity().setCustomerId( 1 );
-		receiptRepository.save( entity );
-		return false;
+		entity.getShirtDetailsEntity().setCustomer( customer );
+		entity.getPantDetailsEntity().setCustomer( customer );
+		Receipt addedReceipt = receiptRepository.save( entity );
+		ReceiptContainer container = new ReceiptContainer();
+		container.setAddress( addedReceipt.getCustomer().getAddress() );
+		container.setContact( addedReceipt.getCustomer().getContact() );
+		container.setCurrentDate( addedReceipt.getCurrentDate() );
+		container.setCustomerId( addedReceipt.getCustomer().getId() );
+		container.setDeliveryDate( addedReceipt.getDeliveryDate() );
+		container.setId( addedReceipt.getId() );
+		container.setName( addedReceipt.getCustomer().getName() );
+		container.setPantDetails( addedReceipt.getPantDetailsEntity() );
+		container.setShirtDetails( addedReceipt.getShirtDetailsEntity() );
+		container.setStatus( addedReceipt.getStatus() );
+		return container;
+	}
+
+	public Long findMaxReceiptId() {
+		return receiptRepository.findMaxId();
 	}
 }
