@@ -24,7 +24,8 @@ public class ReciptService {
 		entity.setDeliveryDate( receipt.getDeliveryDate() );
 		Customer customer = customerDao.findById( receipt.getCustomerId() ).get();
 		entity.setCustomer( customer );
-		entity.setStatus( "Pending" );
+		receipt.setStatus( "Pending" );
+		customer.setStatus("Pending");
 		entity.setPantDetailsEntity( receipt.getPantDetails() );
 		entity.setShirtDetailsEntity( receipt.getShirtDetails() );
 		entity.getPantDetailsEntity().setCustomerId( 1 );
