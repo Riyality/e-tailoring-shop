@@ -27,6 +27,7 @@ public class ReciptController {
 	public void addReceipt( @ModelAttribute ReceiptContainer receipt ) {
 		receipt.setCustomerId( 1 );
 		reciptService.addReceipt( receipt );
+		System.out.println(receipt);
 		System.out.println( "finish" );
 	}
 
