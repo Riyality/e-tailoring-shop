@@ -64,6 +64,7 @@ CREATE TABLE `tailoring`.`receipt` (
   `status` VARCHAR(45) NULL,
   shirt int NOT NULL,
   pant int NOT NULL,
+  `amount` FLOAT NULL,
   FOREIGN KEY (shirt) REFERENCES shirt_details(id),
   FOREIGN KEY (pant) REFERENCES pant_details(id),
   PRIMARY KEY (`id`));

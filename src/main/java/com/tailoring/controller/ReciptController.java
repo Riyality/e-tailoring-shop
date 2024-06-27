@@ -40,7 +40,7 @@ public class ReciptController {
 
 	@PostMapping
 	public String addReceipt( @ModelAttribute ReceiptContainer receipt ) {
-		reciptService.addReceipt( receipt );
+		ReceiptContainer container = reciptService.addReceipt( receipt );
 		return "AddRecipt";
 	}
 
