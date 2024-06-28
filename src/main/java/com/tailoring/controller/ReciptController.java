@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tailoring.entity.Customer;
+import com.tailoring.entity.Receipt;
 import com.tailoring.entity.ReceiptContainer;
 import com.tailoring.service.CustomerService;
 import com.tailoring.service.ReciptService;
@@ -40,7 +41,7 @@ public class ReciptController {
 
 	@PostMapping
 	public String addReceipt( @ModelAttribute ReceiptContainer receipt ) {
-		ReceiptContainer container = reciptService.addReceipt( receipt );
+		Receipt container = reciptService.addReceipt( receipt );
 		return "AddRecipt";
 	}
 
