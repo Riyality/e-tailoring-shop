@@ -42,11 +42,11 @@ public class Receipt {
 
 	private Float amount;
 
-	@OneToOne( cascade = CascadeType.ALL )
+	@OneToOne( cascade = CascadeType.ALL, optional = true )
 	@JoinColumn( name = "shirt", referencedColumnName = "id" )
 	private ShirtDetailsEntity shirtDetailsEntity;
 
-	@OneToOne( cascade = CascadeType.ALL )
+	@OneToOne( cascade = CascadeType.ALL, optional = true )
 	@JoinColumn( name = "pant", referencedColumnName = "id" )
 	private PantDetailsEntity pantDetailsEntity;
 

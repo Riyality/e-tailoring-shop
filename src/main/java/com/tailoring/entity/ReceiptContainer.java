@@ -4,6 +4,9 @@ import java.time.LocalDate;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.tailoring.dto.PantRequestDto;
+import com.tailoring.dto.ShirtRequestDto;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,6 +33,6 @@ public class ReceiptContainer {
 
 	private Float amount;
 
-	private ShirtDetailsEntity shirtDetails;
-	private PantDetailsEntity pantDetails;
+	private ShirtRequestDto shirtDetails = null;
+	private PantRequestDto pantDetails = null;
 }
