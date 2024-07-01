@@ -233,7 +233,7 @@
 						<!-- End::slide__category -->
 
 						<!-- Start::slide -->
-						<li class="slide  has-sub"><a href="/home"
+						<li class="slide  has-sub"><a href="/recipt/getTodayPendingAmount"
 							class="side-menu__item"> <i
 								class="ri-home-8-line side-menu__icon"></i> <span
 								class="side-menu__label">Dashboard</span>
@@ -303,7 +303,12 @@
 								class="ri-inbox-line side-menu__icon"></i> <span
 								class="side-menu__label">Configuration</span>
 						</a></li>
-
+						<li class="slide has-sub"><a href="/recipt/getPendingAmount"
+							class="side-menu__item"> <i
+								class="ri-inbox-line side-menu__icon"></i> <span
+								class="side-menu__label">Pending Amount</span>
+						</a></li>
+						
 						</li>
 
 

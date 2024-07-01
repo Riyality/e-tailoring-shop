@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.tailoring.dao.CustomerDao;
 import com.tailoring.entity.Customer;
+import com.tailoring.entity.Receipt;
 
 @Service
 public class CustomerService {
@@ -42,5 +43,4 @@ public class CustomerService {
 	public Customer getByContact( String contact ) {
 		return customerdao.findByContact( contact );
 	}
-
 }
