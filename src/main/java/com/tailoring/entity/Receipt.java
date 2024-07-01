@@ -41,6 +41,12 @@ public class Receipt {
 	private String status;
 
 	private Float amount;
+	
+	@Column( name = "paid_amount" )
+	private Float paidAmount;
+	
+	@Column( name = "pending_amount" )
+	private Float pendingAmount;
 
 	@OneToOne( cascade = CascadeType.ALL, optional = true )
 	@JoinColumn( name = "shirt", referencedColumnName = "id" )
@@ -49,5 +55,5 @@ public class Receipt {
 	@OneToOne( cascade = CascadeType.ALL, optional = true )
 	@JoinColumn( name = "pant", referencedColumnName = "id" )
 	private PantDetailsEntity pantDetailsEntity;
-
+	
 }

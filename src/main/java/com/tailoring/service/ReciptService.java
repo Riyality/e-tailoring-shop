@@ -1,5 +1,6 @@
 package com.tailoring.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,5 +59,9 @@ public class ReciptService {
 
 	public Long findMaxReceiptId() {
 		return receiptRepository.findMaxId();
+	}
+	
+	public List<Receipt> getPendingAmount() {
+		return receiptRepository.findAll();
 	}
 }
