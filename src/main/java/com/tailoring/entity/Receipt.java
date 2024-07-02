@@ -41,6 +41,8 @@ public class Receipt {
 	private String status;
 
 	private Float amount;
+	
+
 
 	@OneToOne( cascade = CascadeType.ALL, optional = true )
 	@JoinColumn( name = "shirt", referencedColumnName = "id" )
