@@ -44,6 +44,10 @@ public class Customer {
 
 	@Column( name = "status" )
 	private String status;
+	
+	@Column(name="email")
+	private String email;
+	  
 
 	@OneToMany( mappedBy = "customer", cascade = CascadeType.ALL )
 	private List<Receipt> receipts;

@@ -88,8 +88,14 @@
 }
 
 .sub-menu.show {
-	display: block;
+	display: block;	
 }
+.i{
+padding: 10px;
+margin-left:500px;
+height: 10px;
+}
+
 </style>
 
 </head>
@@ -153,12 +159,21 @@
 					<!-- End::header-element -->
 					<div class="header-element">1
 						<!-- Start::header-link -->
-						<div class="">
+
+						<div class="i">
+
 							<form action="/recipt/add_recipt">
 							<input type="text" placeholder="e.g 8080851891" name="contact">
 							<input type="submit" value="search">
 							</form>
-						</div>
+						</div> -->
+						
+						<form action="/recipt/add_recipt">
+						<div class="input-group input-btn-outline mb-3">
+	                         <input type="text" class="form-control" placeholder="e.g 8080851891" name="contact" aria-label="Text input with dropdown button">
+	                         <button class="btn btn-primary dropdown-toggle" type="submit" data-bs-toggle="dropdown" aria-expanded="false">Search</button>
+	                     </div>
+	                     </form>
 						<!-- <a aria-label="Hide Sidebar" class="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle" data-bs-toggle="sidebar" href="javascript:void(0);"><span></span></a> -->
 						<!-- End::header-link -->
 					</div>
@@ -226,7 +241,7 @@
 						<!-- End::slide__category -->
 
 						<!-- Start::slide -->
-						<li class="slide  has-sub"><a href="/home"
+						<li class="slide  has-sub"><a href="/recipt/getTodayPendingAmount"
 							class="side-menu__item"> <i
 								class="ri-home-8-line side-menu__icon"></i> <span
 								class="side-menu__label">Dashboard</span>
@@ -270,25 +285,26 @@
 
 
 						<!-- Start::slide -->
-
-
-						<li class="slide has-sub"><a href="#" class="side-menu__item">
-								<i class="ri-inbox-line side-menu__icon"></i> <span
-								class="side-menu__label">Customer</span>
-						</a></li>
-
-
-						<li class="slide has-sub"><a
-							href="/customers/add_customer_form" class="side-menu__item">
-								<i class="ri-inbox-line side-menu__icon"></i> <span
-								class="side-menu__label">Add Customer</span>
-						</a></li>
-
-						<li class="slide has-sub"><a href="/customers/allcustomer"
-							class="side-menu__item"> <i
+						
+						<li class="slide has-sub"><a href="#" class="side-menu__item"
+							onclick="toggleSubMenu(event)"> <i
 								class="ri-inbox-line side-menu__icon"></i> <span
-								class="side-menu__label">All Customer</span>
-						</a></li>
+								class="side-menu__label">Customer</span>
+						</a>
+							<ul class="sub-menu">
+								<li><a href="/customers/add_customer_form" class="side-menu__item">
+										<i class="ri-add-line side-menu__icon"></i> <span
+										class="side-menu__label">Add Customer</span>
+								</a></li>
+								<li><a href="/customers/allcustomer"
+									class="side-menu__item"> <i
+										class="ri-eye-line side-menu__icon"></i> <span
+										class="side-menu__label">All Customer</span>
+								</a></li>
+							</ul></li>
+
+
+						
 
 
 						<li class="slide has-sub"><a href="/dropdowns/add-dropdown"
@@ -296,7 +312,12 @@
 								class="ri-inbox-line side-menu__icon"></i> <span
 								class="side-menu__label">Configuration</span>
 						</a></li>
-
+						<li class="slide has-sub"><a href="/recipt/getPendingAmount"
+							class="side-menu__item"> <i
+								class="ri-inbox-line side-menu__icon"></i> <span
+								class="side-menu__label">Pending Amount</span>
+						</a></li>
+						
 						</li>
 
 

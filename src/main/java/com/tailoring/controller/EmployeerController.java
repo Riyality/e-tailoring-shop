@@ -54,6 +54,7 @@ public class EmployeerController {
     @PostMapping(value="/update_employee")
     public String updateEmployee(@ModelAttribute Employee e ,Model model) {
     	employeeservice.updateEmployeeRecord(e);
+    	
     	List<Employee> list = employeeservice.allEmployee();
         model.addAttribute("list", list);
         return "employees/list"; 
@@ -64,6 +65,8 @@ public class EmployeerController {
     	employeeservice.deleteEmployeeRecord(id);
         return "redirect:/employees/allemployee"; 
     }
+    
+   
 }
 
 

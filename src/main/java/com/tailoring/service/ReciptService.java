@@ -61,6 +61,7 @@ public class ReciptService {
 	public Long findMaxReceiptId() {
 		return receiptRepository.findMaxId();
 	}
-
-	
+	public List<Receipt> getPendingAmount() {
+		return receiptRepository.findAll();
+	}
 }
