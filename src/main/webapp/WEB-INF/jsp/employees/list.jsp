@@ -8,49 +8,43 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 <div class="container mt-3">
-
-   <h4>All Employee</h4> 
-
-
-
-    <table class="table" style="margin-left:151px" >
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Contact</th>
-                <th>Holiday</th>
-                <th>Join Date</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <c:forEach var="emp" items="${list}">
-                <tr>
-                   
-                    <td>${emp.name}</td>
-                    <td>${emp.contact}</td>
-                    <td>${emp.holiday}</td>
-                    <td>${emp.joinDate}</td>
-                    <td>${emp.age}</td>
-                    <td>${emp.gender}</td>
-                    <td>${emp.status } </td>
-                    
-                    
-                    <td>
-                        <a href="${pageContext.request.contextPath}/employees/update-form?id=${emp.id}" title="Update">
-                            <i class="fas fa-pencil-alt"></i>
-                        </a> &nbsp; &nbsp;
-                        <a href="javascript:void(0);" onclick="confirmDelete(${emp.id})" title="Delete">
-                            <i class="fas fa-trash"></i>
-                        </a>
-                    </td>
-                </tr>
-            </c:forEach>
-        </tbody>
-    </table>
+    <h2>Employee Cards</h2>
+    <div class="row">
+        <c:forEach var="emp" items="${list}">
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card custom-card text-center">
+                    <div class="card-header border-bottom-0 pb-0">
+                        <span class="ms-auto shadow-lg fs-17"><i class="ri-heart-fill text-danger"></i></span>
+                    </div>
+                    <div class="card-body pt-1">
+                        <span class="avatar avatar-xl avatar-rounded me-2 mb-2">
+                         <img src="https://laravelui.spruko.com/synto/build/assets/img/users/11.jpg" alt="img">
+                         
+                        </span>
+                        
+                        <div class="fw-semibold fs-16">${emp.name}</div>
+                        <div class="text-muted">
+                            <p>
+                            <Span>Contact: ${emp.contact}</Span>&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <Span>Holiday: ${emp.holiday}</Span></p>
+                           <p> <Span>Join Date: ${emp.joinDate}</Span>&nbsp&nbsp&nbsp&nbsp
+                            <Span>Age: ${emp.age}</Span></p>
+                            <p><span>Gender: ${emp.gender}</span>&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <span>Status: ${emp.status}</span></p>
+                        </div>
+                        <div class="btn-list">
+                            <a href="${pageContext.request.contextPath}/employees/update-form?id=${emp.id}" title="Update" class="btn btn-primary">
+                                <i class="fas fa-pencil-alt"></i>
+                            </a>
+                            <a href="javascript:void(0);" onclick="confirmDelete(${emp.id})" title="Delete" class="btn btn-danger">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </c:forEach>
+    </div>
 </div>
 
 <script>
