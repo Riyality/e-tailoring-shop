@@ -1,5 +1,6 @@
 package com.tailoring.controller;
 
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +14,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.tailoring.entity.Customer;
+import contity;
+import com.tailoring.entity.PantPress;
+import com.tailoring.entity.PantTip;
+import com.tailoring.entity.PantType;
+import com.tailoring.entity.PocketType;
+import com.tailoring.entm.tailoring.entity.Customer;
+import com.tailoring.entity.PantDetailsEntity;
+import com.tailoring.entity.PantPress;
+import com.tailoring.entity.PantTip;
+import com.tailoring.entity.PantType;
+import com.tailoring.entity.PocketType;
 import com.tailoring.entity.Receipt;
 import com.tailoring.entity.ReceiptContainer;
 import com.tailoring.service.CustomerService;
+import com.tailoring.service.DropdownService;
+import com.tailoring.service.PantDetailsService;
 import com.tailoring.service.ReciptService;
 
 @Controller
@@ -25,6 +38,9 @@ public class ReciptController {
 
 	@Autowired
 	private ReciptService reciptService;
+	
+	@Autowired
+	private DropdownService service;
 
 	@Autowired
 	private CustomerService customerService;
@@ -34,6 +50,20 @@ public class ReciptController {
 		Customer customer = customerService.getByContact( contact );
 		model.addAttribute( "customer", customer );
 
+        List<PantType> pantTypeList = service.getPantTypes();
+        model.addAttribute("pantType", pantTypeList);
+        
+        List<PantTip> pantTipTypeList = service.getPantTipTypes();
+        model.addAttribute("pantTip", pantTipTypeList);
+        
+        List<PantPress> pantPressTypeList = service.getPantPressTypes();
+        model.addAttribute("pantPress", pantPressTypeList);
+        
+        List<PocketType> pocketTypeList = service.getPocketTypes();
+        model.addAttribute("pocketType", pocketTypeList);
+        
+        
+        
 		Long maxReceiptId = reciptService.findMaxReceiptId();
 		if ( maxReceiptId != null )
 			model.addAttribute( "receiptMaxId", maxReceiptId + 1 );
@@ -42,6 +72,7 @@ public class ReciptController {
 		return "AddRecipt";
 
 	}
+	
 
 	@PostMapping
 	public String addReceipt( @ModelAttribute ReceiptContainer receipt ) {
