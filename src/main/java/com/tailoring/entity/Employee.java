@@ -1,7 +1,6 @@
 package com.tailoring.entity;
 
 import java.time.LocalDate;
-import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -40,11 +39,13 @@ public class Employee {
     
     @Column(name = "status")
     private String status;
-
+    
+   
 	public Employee() {
 		super();
 	}
 
+	
 	public Employee(int id, String name, String contact, String holiday, LocalDate joinDate, int age, String gender,
 			String status) {
 		super();
@@ -56,7 +57,9 @@ public class Employee {
 		this.age = age;
 		this.gender = gender;
 		this.status = status;
+		
 	}
+
 
 	public int getId() {
 		return id;
@@ -121,6 +124,8 @@ public class Employee {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-    
- 
+
+
+	
+	
 }
