@@ -1,8 +1,8 @@
 <jsp:include page="../modules/header.jsp" />
 
 
-<!-- Start::app-content -->
-<div class="main-content app-content">
+ <!-- Start::app-content -->
+ <div class="main-content app-content">
 	<div class="container-fluid my-5">
 
 
@@ -70,6 +70,15 @@
 											name="Payment_pending" placeholder="Customer Payment_pending">
 									</div>
 								</div>
+								
+								
+								<div class="col-xl-6">
+									<div class="mb-3">
+										<label for="form-text" class="form-label">Customer
+											Email</label> <input type="text" class="form-control" id=""
+											name="email" placeholder="Customer Email">
+									</div>
+								</div>
 
 
 
@@ -87,9 +96,15 @@
 		</div>
 
 	</div>
-</div>
-
+</div> 
+ 
 <!-- End::app-content -->
+
+
+
+
+
+
 
 
 
