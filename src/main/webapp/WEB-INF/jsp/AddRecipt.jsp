@@ -37,6 +37,7 @@
 </style>
 
 
+
 <div class="main-content app-content">
 	<div class="container-fluid my-5">
 		<form action="/recipt" method="post">
@@ -109,15 +110,25 @@
 				</div>
 			</div>
 
-
-			<br> <br>
-			<div class="radio">
+			<!-- <div class="radio">
 				<label>Select Your Type:</label><br> <label for="pant">
 					<input type="radio" id="Pant" name="" value="Pant"> Pant
 				</label> <label for="Shirt"> <input type="radio" id="Shirt" name=""
 					value="Shirt"> Shirt
 				</label><br> <br> <br>
-			</div>
+			</div> -->
+			
+			<div class="form-check mb-2">
+		        <input class="form-checked-outline form-checked-secondary" type="radio" name="secondaryoutlineRadio" value="Shirt" id="Shirt">
+		        <label class="form-check-label" for="secondaryoutlineRadio">
+		            Shirt
+		        </label>
+		        
+		         <input class="form-checked-outline form-checked-secondary" type="radio" name="secondaryoutlineRadio" value="Pant" id="Pant">
+		        <label class="form-check-label" for="secondaryoutlineRadio">
+		            Pant
+		        </label>
+		    </div>
 
 			<!-- Start:: row-1 -->
 

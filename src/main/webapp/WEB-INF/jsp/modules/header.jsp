@@ -159,12 +159,21 @@ height: 10px;
 					<!-- End::header-element -->
 					<div class="header-element">
 						<!-- Start::header-link -->
+
 						<div class="i">
+
 							<form action="/recipt/add_recipt">
 							<input type="text" placeholder="e.g 8080851891" name="contact">
 							<input type="submit" value="search">
 							</form>
-						</div>
+						</div> -->
+						
+						<form action="/recipt/add_recipt">
+						<div class="input-group input-btn-outline mb-3">
+	                         <input type="text" class="form-control" placeholder="e.g 8080851891" name="contact" aria-label="Text input with dropdown button">
+	                         <button class="btn btn-primary dropdown-toggle" type="submit" data-bs-toggle="dropdown" aria-expanded="false">Search</button>
+	                     </div>
+	                     </form>
 						<!-- <a aria-label="Hide Sidebar" class="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle" data-bs-toggle="sidebar" href="javascript:void(0);"><span></span></a> -->
 						<!-- End::header-link -->
 					</div>
@@ -232,7 +241,7 @@ height: 10px;
 						<!-- End::slide__category -->
 
 						<!-- Start::slide -->
-						<li class="slide  has-sub"><a href="/home"
+						<li class="slide  has-sub"><a href="/recipt/getTodayPendingAmount"
 							class="side-menu__item"> <i
 								class="ri-home-8-line side-menu__icon"></i> <span
 								class="side-menu__label">Dashboard</span>
@@ -303,7 +312,12 @@ height: 10px;
 								class="ri-inbox-line side-menu__icon"></i> <span
 								class="side-menu__label">Configuration</span>
 						</a></li>
-
+						<li class="slide has-sub"><a href="/recipt/getPendingAmount"
+							class="side-menu__item"> <i
+								class="ri-inbox-line side-menu__icon"></i> <span
+								class="side-menu__label">Pending Amount</span>
+						</a></li>
+						
 						</li>
 
 
