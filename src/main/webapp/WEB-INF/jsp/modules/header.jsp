@@ -88,8 +88,14 @@
 }
 
 .sub-menu.show {
-	display: block;
+	display: block;	
 }
+.i{
+padding: 10px;
+margin-left:500px;
+height: 10px;
+}
+
 </style>
 
 </head>
@@ -153,7 +159,9 @@
 					<!-- End::header-element -->
 					<div class="header-element">
 						<!-- Start::header-link -->
-						<!-- <div class="">
+
+						<div class="i">
+
 							<form action="/recipt/add_recipt">
 							<input type="text" placeholder="e.g 8080851891" name="contact">
 							<input type="submit" value="search">
@@ -277,25 +285,26 @@
 
 
 						<!-- Start::slide -->
-
-
-						<li class="slide has-sub"><a href="#" class="side-menu__item">
-								<i class="ri-inbox-line side-menu__icon"></i> <span
-								class="side-menu__label">Customer</span>
-						</a></li>
-
-
-						<li class="slide has-sub"><a
-							href="/customers/add_customer_form" class="side-menu__item">
-								<i class="ri-inbox-line side-menu__icon"></i> <span
-								class="side-menu__label">Add Customer</span>
-						</a></li>
-
-						<li class="slide has-sub"><a href="/customers/allcustomer"
-							class="side-menu__item"> <i
+						
+						<li class="slide has-sub"><a href="#" class="side-menu__item"
+							onclick="toggleSubMenu(event)"> <i
 								class="ri-inbox-line side-menu__icon"></i> <span
-								class="side-menu__label">All Customer</span>
-						</a></li>
+								class="side-menu__label">Customer</span>
+						</a>
+							<ul class="sub-menu">
+								<li><a href="/customers/add_customer_form" class="side-menu__item">
+										<i class="ri-add-line side-menu__icon"></i> <span
+										class="side-menu__label">Add Customer</span>
+								</a></li>
+								<li><a href="/customers/allcustomer"
+									class="side-menu__item"> <i
+										class="ri-eye-line side-menu__icon"></i> <span
+										class="side-menu__label">All Customer</span>
+								</a></li>
+							</ul></li>
+
+
+						
 
 
 						<li class="slide has-sub"><a href="/dropdowns/add-dropdown"
