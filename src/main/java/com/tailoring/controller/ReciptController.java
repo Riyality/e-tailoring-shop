@@ -45,41 +45,41 @@ public class ReciptController {
 
 	@PostMapping
 	public String addReceipt( @ModelAttribute ReceiptContainer receipt ) {
-		Receipt container = reciptService.addReceipt( receipt );
+		//Receipt container = reciptService.addReceipt( receipt );
 		return "Payment";
 	}
-	
-	@GetMapping("/getPendingAmount")
-	public String getPendingAmount(Model model) {
-	    List<Receipt> pendingAmount = reciptService.getPendingAmount();
-	    
-	    List<Receipt> pendingReceipts = new ArrayList<>();
 
-	    for (Receipt receipt : pendingAmount) {
-	        System.out.println("STATUS:" + receipt.getStatus());
-	        if ("Pending".equals(receipt.getStatus())) {
-	            pendingReceipts.add(receipt);
-	        }
-	    }
+	@GetMapping( "/getPendingAmount" )
+	public String getPendingAmount( Model model ) {
+		List<Receipt> pendingAmount = reciptService.getPendingAmount();
 
-	    model.addAttribute("pa", pendingReceipts);
-	    return "pendingAmount";
+		List<Receipt> pendingReceipts = new ArrayList<>();
+
+		for ( Receipt receipt : pendingAmount ) {
+			System.out.println( "STATUS:" + receipt.getStatus() );
+			if ( "Pending".equals( receipt.getStatus() ) ) {
+				pendingReceipts.add( receipt );
+			}
+		}
+
+		model.addAttribute( "pa", pendingReceipts );
+		return "pendingAmount";
 	}
-	
-	@GetMapping("/getTodayPendingAmount")
-	public String todayReceivePendingAmount(Model model) {
-		 List<Receipt> pendingAmount = reciptService.getPendingAmount();
-		    
-		    List<Receipt> pendingReceipts = new ArrayList<>();
-		    LocalDate todayDate = LocalDate.now();
-		    
-		    for (Receipt receipt : pendingAmount) {
-		        if ("Pending".equals(receipt.getStatus()) && todayDate.equals(receipt.getDeliveryDate())) {
-		            pendingReceipts.add(receipt);
-		        }
-		    }
-		    model.addAttribute("pa", pendingReceipts);
-		    return "todayPendingReceiveAmount";
+
+	@GetMapping( "/getTodayPendingAmount" )
+	public String todayReceivePendingAmount( Model model ) {
+		List<Receipt> pendingAmount = reciptService.getPendingAmount();
+
+		List<Receipt> pendingReceipts = new ArrayList<>();
+		LocalDate todayDate = LocalDate.now();
+
+		for ( Receipt receipt : pendingAmount ) {
+			if ( "Pending".equals( receipt.getStatus() ) && todayDate.equals( receipt.getDeliveryDate() ) ) {
+				pendingReceipts.add( receipt );
+			}
+		}
+		model.addAttribute( "pa", pendingReceipts );
+		return "todayPendingReceiveAmount";
 	}
 
 }
