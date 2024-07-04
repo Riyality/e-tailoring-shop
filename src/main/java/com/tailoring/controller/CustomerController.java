@@ -8,13 +8,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tailoring.entity.Customer;
 import com.tailoring.service.CustomerService;
-
 
 @Controller
 @RequestMapping("/customers")
@@ -48,13 +46,12 @@ public class CustomerController {
 	public String update(@RequestParam int id, Model model) {
 		Customer customer = customerservice.findbyid(id);
 		model.addAttribute("customer", customer);
-
 		return "customers/edit";
 
 	}
 
-	@PostMapping(value="/updatecustomer")
-	public String updateCustomer(@ModelAttribute Customer customer,Model model) {
+	@PostMapping(value = "/updatecustomer")
+	public String updateCustomer(@ModelAttribute Customer customer, Model model) {
 		customerservice.updatecustomerrecord(customer);
 		List<Customer> list = customerservice.allcustomerrecord();
 		model.addAttribute("list", list);
@@ -67,5 +64,13 @@ public class CustomerController {
 		List<Customer> list = customerservice.allcustomerrecord();
 		model.addAttribute("list", list);
 		return "customers/list";
+	}
+
+	@GetMapping("/byname")
+	public String getCustomersByName(@RequestParam String name, Model model) {
+		List<Customer> list = customerservice.getCustomersByName(name);
+		model.addAttribute("list", list);
+		return "customers/list";
+
 	}
 }

@@ -52,4 +52,5 @@ public class Customer {
 	@OneToMany( mappedBy = "customer", cascade = CascadeType.ALL )
 	private List<Receipt> receipts;
 
+
 }
