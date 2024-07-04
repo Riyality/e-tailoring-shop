@@ -14,13 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import contity;
-import com.tailoring.entity.PantPress;
-import com.tailoring.entity.PantTip;
-import com.tailoring.entity.PantType;
-import com.tailoring.entity.PocketType;
-import com.tailoring.entm.tailoring.entity.Customer;
-import com.tailoring.entity.PantDetailsEntity;
+import com.tailoring.entity.Customer;
+import com.tailoring.entity.Employee;
 import com.tailoring.entity.PantPress;
 import com.tailoring.entity.PantTip;
 import com.tailoring.entity.PantType;
@@ -29,7 +24,7 @@ import com.tailoring.entity.Receipt;
 import com.tailoring.entity.ReceiptContainer;
 import com.tailoring.service.CustomerService;
 import com.tailoring.service.DropdownService;
-import com.tailoring.service.PantDetailsService;
+import com.tailoring.service.EmployeeService;
 import com.tailoring.service.ReciptService;
 
 @Controller
@@ -44,7 +39,10 @@ public class ReciptController {
 
 	@Autowired
 	private CustomerService customerService;
-
+	
+	@Autowired
+	private EmployeeService employeeservice;
+	
 	@GetMapping( "/add_recipt" )
 	public String displayPage( @RequestParam String contact, Model model ) {
 		Customer customer = customerService.getByContact( contact );
@@ -73,11 +71,20 @@ public class ReciptController {
 
 	}
 	
-
 	@PostMapping
-	public String addReceipt( @ModelAttribute ReceiptContainer receipt ) {
-		Receipt container = reciptService.addReceipt( receipt );
-		return "Payment";
+	public String addReceipt( @ModelAttribute ReceiptContainer receipt, Model model ) {
+		//Receipt container = reciptService.addReceipt( receipt );
+		 List<Employee> employeerecord = employeeservice.allEmployee();
+	        model.addAttribute("list", employeerecord);
+	        
+
+		return "payments/add";
+	}
+	@GetMapping
+	public String dispayempList(Model model){
+		 List<Employee> list = employeeservice.allEmployee();
+         model.addAttribute("list", list);
+		return "payments/add";
 	}
 	
 	@GetMapping("/getPendingAmount")
