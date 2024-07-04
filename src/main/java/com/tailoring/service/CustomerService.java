@@ -1,13 +1,11 @@
 package com.tailoring.service;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.tailoring.dao.CustomerDao;
 import com.tailoring.entity.Customer;
-import com.tailoring.entity.Receipt;
 
 @Service
 public class CustomerService {
@@ -43,4 +41,9 @@ public class CustomerService {
 	public Customer getByContact( String contact ) {
 		return customerdao.findByContact( contact );
 	}
+	
+  
+    public List<Customer> getCustomersByName(String name) {
+        return  customerdao.findByNameContaining(name);
+    }
 }

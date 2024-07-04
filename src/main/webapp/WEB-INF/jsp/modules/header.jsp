@@ -82,20 +82,21 @@
 	href="<c:url value="/resources/assets/libs/swiper/swiper-bundle.min.css"/>">
 <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
 	rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <style>
 .sub-menu {
 	display: none;
 }
 
 .sub-menu.show {
-	display: block;	
-}
-.i{
-padding: 10px;
-margin-left:500px;
-height: 10px;
+	display: block;
 }
 
+form {
+	margin-left: 70px; /
+}
 </style>
 
 </head>
@@ -160,20 +161,29 @@ height: 10px;
 					<div class="header-element">
 						<!-- Start::header-link -->
 
-						<div class="i">
 
-							<form action="/recipt/add_recipt">
-							<input type="text" placeholder="e.g 8080851891" name="contact">
-							<input type="submit" value="search">
+
+						<div class="form-container">
+							<form action="/customers/byname" method="get">
+								<div class="input-group mb-3">
+									<input type="text" class="form-control"
+										placeholder="Enter customer name" name="name"
+										aria-label="Text input with dropdown button">
+									<button class="btn btn-secondary" type="submit">Search</button>
+								</div>
 							</form>
-						</div> -->
-						
+						</div>
+
+
 						<form action="/recipt/add_recipt">
-						<div class="input-group input-btn-outline mb-3">
-	                         <input type="text" class="form-control" placeholder="e.g 8080851891" name="contact" aria-label="Text input with dropdown button">
-	                         <button class="btn btn-primary dropdown-toggle" type="submit" data-bs-toggle="dropdown" aria-expanded="false">Search</button>
-	                     </div>
-	                     </form>
+							<div class="input-group input-btn-outline mb-3">
+								<input type="text" class="form-control"
+									placeholder="e.g 8080851891" name="contact"
+									aria-label="Text input with dropdown button">
+								<button class="btn btn-primary dropdown-toggle" type="submit"
+									data-bs-toggle="dropdown" aria-expanded="false">Search</button>
+							</div>
+						</form>
 						<!-- <a aria-label="Hide Sidebar" class="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle" data-bs-toggle="sidebar" href="javascript:void(0);"><span></span></a> -->
 						<!-- End::header-link -->
 					</div>
@@ -241,9 +251,9 @@ height: 10px;
 						<!-- End::slide__category -->
 
 						<!-- Start::slide -->
-						<li class="slide  has-sub"><a href="/recipt/getTodayPendingAmount"
-							class="side-menu__item"> <i
-								class="ri-home-8-line side-menu__icon"></i> <span
+						<li class="slide  has-sub"><a
+							href="/recipt/getTodayPendingAmount" class="side-menu__item">
+								<i class="ri-home-8-line side-menu__icon"></i> <span
 								class="side-menu__label">Dashboard</span>
 						</a></li>
 						<!-- End::slide -->
@@ -285,15 +295,16 @@ height: 10px;
 
 
 						<!-- Start::slide -->
-						
+
 						<li class="slide has-sub"><a href="#" class="side-menu__item"
 							onclick="toggleSubMenu(event)"> <i
 								class="ri-inbox-line side-menu__icon"></i> <span
 								class="side-menu__label">Customer</span>
 						</a>
 							<ul class="sub-menu">
-								<li><a href="/customers/add_customer_form" class="side-menu__item">
-										<i class="ri-add-line side-menu__icon"></i> <span
+								<li><a href="/customers/add_customer_form"
+									class="side-menu__item"> <i
+										class="ri-add-line side-menu__icon"></i> <span
 										class="side-menu__label">Add Customer</span>
 								</a></li>
 								<li><a href="/customers/allcustomer"
@@ -304,7 +315,7 @@ height: 10px;
 							</ul></li>
 
 
-						
+
 
 
 						<li class="slide has-sub"><a href="/dropdowns/add-dropdown"
@@ -317,7 +328,7 @@ height: 10px;
 								class="ri-inbox-line side-menu__icon"></i> <span
 								class="side-menu__label">Pending Amount</span>
 						</a></li>
-						
+
 						</li>
 
 
@@ -345,6 +356,15 @@ height: 10px;
 						}
 					}
 				</script>
+
+
+
+
+
+
+
+
+
 
 				<!-- End::nav -->
 
