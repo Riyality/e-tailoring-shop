@@ -10,10 +10,18 @@ import com.tailoring.dao.PantPressTypeDao;
 import com.tailoring.dao.PantTipTypeDao;
 import com.tailoring.dao.PantTypeDao;
 import com.tailoring.dao.PocketTypeDao;
+import com.tailoring.dao.ShirtPocketTypeDao;
+import com.tailoring.dao.ShirtPressTypeDao;
+import com.tailoring.dao.ShirtTipTypeDao;
+import com.tailoring.dao.ShirtTypeDao;
 import com.tailoring.entity.PantPress;
 import com.tailoring.entity.PantTip;
 import com.tailoring.entity.PantType;
 import com.tailoring.entity.PocketType;
+import com.tailoring.entity.ShirtPocketType;
+import com.tailoring.entity.ShirtPress;
+import com.tailoring.entity.ShirtTip;
+import com.tailoring.entity.ShirtType;
 
 @Service
 public class DropdownService {
@@ -30,9 +38,22 @@ public class DropdownService {
 
     @Autowired
     private PantPressTypeDao pantpressDao;
+    
+    @Autowired
+    private ShirtTypeDao shirttypeDao;
 
     @Autowired
     private PantTipTypeDao panttiptypeDao;
+    
+    @Autowired
+    private ShirtTipTypeDao shirttiptypedao;
+    
+    @Autowired
+    private ShirtPressTypeDao shirtpresstypedao;
+    
+    @Autowired
+    private ShirtPocketTypeDao shirtpockettypedao;
+    
     public void addPant(List<String> ptype) {
         List<PantType> list1 = new ArrayList<>();
         for (String input : ptype) {
@@ -88,10 +109,59 @@ public class DropdownService {
 	    public List<PocketType> getPocketTypes() {
 	        return (List<PocketType>) pocketTypeDao.findAll();
 	    }
-	    
-	    
-	
 
-	
-	
-}
+
+	    public void addShirt(List<String> stype) {
+	        for (String type : stype) {
+	            ShirtType shirtType = new ShirtType();
+	            shirtType.setShirtType(type);
+	            shirttypeDao.save(shirtType);
+	        }
+	    }
+
+	    public List<ShirtType> getShirtTypes() {
+	        return (List<ShirtType>) shirttypeDao.findAll();
+	    }
+
+		public List<ShirtTip> getShirtTipTypes() {
+		    return (List<ShirtTip>) shirttiptypedao.findAll();
+		}
+
+		public void addShirtTip(List<String> tiptype) {
+			 List<ShirtTip> list2 = new ArrayList<>();
+		        for (String input : tiptype) {
+		        	ShirtTip t = new ShirtTip();
+		            t.setShirttiptype(input);
+		            list2.add(t);
+		        }
+		        shirttiptypedao.saveAll(list2);
+			
+		}
+
+		public void addShirtpress(List<String> presstype) {
+			   List<ShirtPress> list2 = new ArrayList<>();
+		        for (String input : presstype) {
+		            ShirtPress t = new ShirtPress();
+		            t.setShirtpressType(input);
+		            list2.add(t);
+		        }
+		        shirtpresstypedao.saveAll(list2);
+		}
+
+		 public void addShirtPocket(List<String> inputs) {
+		        List<ShirtPocketType> list = new ArrayList<>();
+		        for (String input : inputs) {
+		            ShirtPocketType t = new ShirtPocketType();
+		            t.setShirtPocketType(input);
+		            list.add(t);
+		        }
+		        shirtpockettypedao.saveAll(list);
+		    }
+
+		    public List<ShirtPocketType> getShirtPocketTypes() {
+		        return (List<ShirtPocketType>) shirtpockettypedao.findAll();
+		    }
+		}
+		
+		
+
