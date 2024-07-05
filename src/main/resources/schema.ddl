@@ -10,6 +10,30 @@ CREATE TABLE `tailoring`.`customer` (
   PRIMARY KEY (`id`)
 ) ;
 
+CREATE TABLE `tailoring`.`employee` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `age` int DEFAULT NULL,
+  `contact` varchar(255) DEFAULT NULL,
+  `gender` varchar(255) DEFAULT NULL,
+  `holiday` varchar(255) DEFAULT NULL,
+  `joindate` date DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+CREATE TABLE `tailoring`.`payment` (
+  `recipt-no` int NOT NULL AUTO_INCREMENT,
+  `amount` int DEFAULT NULL,
+  `finalamount` int DEFAULT NULL,
+  `paidamount` int DEFAULT NULL,
+  `remainingamount` int DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `due_Date` date DEFAULT NULL,
+  PRIMARY KEY (`recipt-no`)
+);
+
 
   
   CREATE TABLE `tailoring`.`shirt_details` (
@@ -70,27 +94,52 @@ CREATE TABLE `tailoring`.`receipt` (
   PRIMARY KEY (`id`));
   
   
-  CREATE TABLE `shirt_pocket_type` (
+  CREATE TABLE `tailoring`.`shirt_pocket_type` (
   `id` int NOT NULL AUTO_INCREMENT,
   `shirt_pocket_type` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
 ) ;
 
+CREATE TABLE `tailoring`.`pocket_type` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `pockettype` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
 
-CREATE TABLE `shirt_press_type` (
+CREATE TABLE `tailoring`.`shirt_press_type` (
   `id` int NOT NULL AUTO_INCREMENT,
   `shirt_press_type` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
 ) ;
-CREATE TABLE `shirt_tip_type` (
+
+CREATE TABLE `tailoring`.`pant_press_type` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `presstype` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `tailoring`.`shirt_tip_type` (
   `id` int NOT NULL AUTO_INCREMENT,
   `shirttiptype` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
 ) ;
 
-CREATE TABLE `shirt_type` (
+CREATE TABLE `tailoring`.`pant_tip_type` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `tiptype` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ;
+
+CREATE TABLE `tailoring`.`shirt_type` (
   `id` int NOT NULL AUTO_INCREMENT,
   `stype` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `tailoring`.`pant_type` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `ptype` varchar(255) DEFAULT NULL,
+  `rate` int DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
 
