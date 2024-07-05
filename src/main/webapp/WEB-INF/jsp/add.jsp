@@ -19,6 +19,8 @@ body {
 	height: 1000px;
 }
 
+
+
 .button-container {
 	background-color: #fff;
 	padding: 10px;
@@ -1032,16 +1034,16 @@ form {
 			<h5>Shirt Type</h5>
 			<span class="close" onclick="closeForm('form-modal-shirt-type')">&times;</span>
 			<form id="dynamic-form-pant-type"
-				onsubmit="handlePantTypeSubmit(event)">
-				<div id="input-container-pant-type" class="input-container">
+				onsubmit="handlShirtTypeSubmit(event)">
+				<div id="input-container-shirt-type" class="input-container">
 					<div class="input-group">
-						<input type="text" name="dynamicInput-pant-type">
+						<input type="text" name="dynamicInput-shirt-type">
 						<button type="button" class="add-button"
-							onclick="addInputForPantType()">+</button>
+							onclick="addInputForShirtType()">+</button>
 					</div>
 				</div>
 				<button type="submit" class="submit-button">Save</button>
-				<div id="message-pant-type" class="message">Successfully added</div>
+				<div id="message-shirt-type" class="message">Successfully added</div>
 			</form>
 		</div>
 	</div>
@@ -1067,15 +1069,15 @@ form {
 			<span class="close" onclick="closeForm('form-modal-shirt-tip-type')">&times;</span>
 			<form id="dynamic-form-pant-tip-type"
 				onsubmit="handlePantTipTypeSubmit(event)">
-				<div id="input-container1" class="input-container">
+				<div id="input-shirt-container1" class="input-container">
 					<div class="input-group">
-						<input type="text" name="dynamicInput-pant-tip-type">
+						<input type="text" name="dynamicInput-shirt-tip-type">
 						<button type="button" class="add-button"
-							onclick="addInputForPantTipType()">+</button>
+							onclick="addInputForShirtTipType()">+</button>
 					</div>
 				</div>
 				<button type="submit" class="submit-button">Save</button>
-				<div id="message-pant-tip-type" class="message">Successfully
+				<div id="message-shirt-tip-type" class="message">Successfully
 					added</div>
 			</form>
 		</div>
@@ -1083,7 +1085,7 @@ form {
 
 	<div class="button-container">
 		<button class="add-button" type="button"
-			onclick="showShirtPressTypePopup1()">
+			onclick="showShirtPressTypePopup()">
 			<i class="fa fa-plus" aria-hidden="true"></i>
 		</button>
 		<button class="view-button" type="button"
@@ -1100,17 +1102,17 @@ form {
 		<div class="modal-content">
 			<h5>Shirt Press Type</h5>
 			<span class="close" onclick="closeForm('form-modal-shirt-press-type')">&times;</span>
-			<form id="dynamic-form-pant-press-type"
+			<form id="dynamic-form-shirt-press-type"
 				onsubmit="handlePantPressTypeSubmit(event)">
-				<div id="input-container-pant-press-type" class="input-container">
+				<div id="input-container-shirt-press-type" class="input-container">
 					<div class="input-group">
-						<input type="text" name="dynamicInput-pant-press-type">
+						<input type="text" name="dynamicInput-shirt-press-type">
 						<button type="button" class="add-button"
-							onclick="addInputForPantPressType()">+</button>
+							onclick="addInputForShirtPressType()">+</button>
 					</div>
 				</div>
 				<button type="submit" class="submit-button">Save</button>
-				<div id="message-pant-press-type" class="message">Successfully
+				<div id="message-shirt-press-type" class="message">Successfully
 					added</div>
 			</form>
 		</div>
@@ -1120,7 +1122,7 @@ form {
  -->
 	<div class="button-container">
 		<button class="add-button" type="button"
-			onclick="C()">
+			onclick="showPocketTypePopup()">
 			<i class="fa fa-plus" aria-hidden="true"></i>
 		</button>
 		<button class="view-button" type="button"
@@ -1133,18 +1135,18 @@ form {
 	<div id="form-modal-shirt-pocket-type" class="modal">
 		<div class="modal-content">
 			<h5>Shirt Pocket Type</h5>
-			<span class="close" onclick="closeForm(form-modal-shirt-pocket-type')">&times;</span>
+			<span class="close" onclick="closeForm('form-modal-shirt-pocket-type')">&times;</span>
 			<form id="dynamic-form-pocket-type"
 				onsubmit="handlePocketTypeSubmit(event)">
-				<div id="input-container-pocket-type" class="input-container">
+				<div id="input-container-shirt-pocket-type" class="input-container">
 					<div class="input-group">
-						<input type="text" name="dynamicInput-pocket-type">
+						<input type="text" name="dynamicInput-shirt-pocket-type">
 						<button type="button" class="add-button"
-							onclick="addInputForPocketType()">+</button>
+							onclick="addInputForShirtPocketType()">+</button>
 					</div>
 				</div>
 				<button type="submit" class="submit-button">Save</button>
-				<div id="message-pocket-type" class="message">Successfully
+				<div id="message-shirt-pocket-type" class="message">Successfully
 					added</div>
 			</form>
 		</div>
@@ -1152,17 +1154,17 @@ form {
 
 	<!-- 	View Pant Types list
  -->
-	<div id="form-modal-view-data" class="modal">
+	<div id="form-shirt-view-data" class="modal">
 		<div class="modal-content">
 			<h5>View Shirt Types</h5>
-			<span class="close" onclick="closeForm('form-modal-view-data')">&times;</span>
+			<span class="close" onclick="closeForm('form-shirt-view-data')">&times;</span>
 			<div id="view-data-container" class="input-container">
 				<!-- Data will be dynamically inserted here -->
 			</div>
 			<button type="button" class="submit-button"
 				onclick="openForm('form-modal-add-data')">Add</button>
 			<button type="button" class="submit-button"
-				onclick="closeForm('form-modal-view-data')">Close</button>
+				onclick="closeForm('form-shirt-view-data')">Close</button>
 		</div>
 	</div>
 
@@ -1177,16 +1179,16 @@ form {
 			<h5>Shirt Type</h5>
 			<span class="close" onclick="closeForm('form-modal-add-data')">&times;</span>
 			<form id="dynamic-form-pant-type"
-				onsubmit="handlePantTypeSubmit1(event)">
-				<div id="input-container-pant-type1" class="input-container">
+				onsubmit="handlShirtTypeSubmit1(event)">
+				<div id="input-container-shirt-type1" class="input-container">
 					<div class="input-group">
-						<input type="text" name="dynamicInput-pant-type1">
+						<input type="text" name="dynamicInput-shirt-type1">
 						<button type="button" class="add-button"
-							onclick="addInputForPantType1()">+</button>
+							onclick="addInputForShirtType1()">+</button>
 					</div>
 				</div>
 				<button type="submit" class="submit-button">Save</button>
-				<div id="message-pant-type1" class="message">Successfully
+				<div id="message-shirt-type1" class="message">Successfully
 					added</div>
 			</form>
 		</div>
@@ -1195,17 +1197,17 @@ form {
 
 	<!-- 	View Pant Tip Types list
  -->
-	<div id="form-modal-view-data1" class="modal">
+	<div id="form-shirt-view-data1" class="modal">
 		<div class="modal-content">
 			<h5>View Shirt Tip Types</h5>
-			<span class="close" onclick="closeForm('form-modal-view-data1')">&times;</span>
+			<span class="close" onclick="closeForm('form-shirt-view-data1')">&times;</span>
 			<div id="view-data-container1" class="input-container">
 				<!-- Data will be dynamically inserted here -->
 			</div>
 			<button type="button" class="submit-button"
 				onclick="openForm('form-modal-add-data1')">Add</button>
 			<button type="button" class="submit-button"
-				onclick="closeForm('form-modal-view-data1')">Close</button>
+				onclick="closeForm('form-shirt-view-data1')">Close</button>
 		</div>
 	</div>
 
@@ -1217,15 +1219,15 @@ form {
 			<span class="close" onclick="closeForm('form-modal-add-data1')">&times;</span>
 			<form id="dynamic-form-pant-tip-type1"
 				onsubmit="handlePantTipTypeSubmit1(event)">
-				<div id="input-container2" class="input-container">
+				<div id="input-shirt-container2" class="input-container">
 					<div class="input-group">
-						<input type="text" name="dynamicInput-pant-tip-type1">
+						<input type="text" name="dynamicInput-shirt-tip-type1">
 						<button type="button" class="add-button"
-							onclick="addInputForPantTipType1()">+</button>
+							onclick="addInputForShirtTipType1()">+</button>
 					</div>
 				</div>
 				<button type="submit" class="submit-button">Save</button>
-				<div id="message-pant-tip-type1" class="message">Successfully
+				<div id="message-shirt-tip-type1" class="message">Successfully
 					added</div>
 			</form>
 		</div>
@@ -1236,10 +1238,10 @@ form {
 	<!-- 	View Pant Press Types list
  -->
 
-	<div id="form-modal-view-data2" class="modal">
+	<div id="form-shirt-view-data2" class="modal">
 		<div class="modal-content">
 			<h5>View Shirt Press Types</h5>
-			<span class="close" onclick="closeForm('form-modal-view-data2')">&times;</span>
+			<span class="close" onclick="closeForm('form-shirt-view-data2')">&times;</span>
 			<div id="view-data-container2" class="input-container">
 				<!-- Data will be dynamically inserted here -->
 			</div>
@@ -1247,7 +1249,7 @@ form {
 				onclick="openForm('form-modal-add-data2')">Add</button>
 
 			<button type="button" class="submit-button"
-				onclick="closeForm('form-modal-view-data2')">Close</button>
+				onclick="closeForm('form-shirt-view-data2')">Close</button>
 		</div>
 	</div>
 
@@ -1255,17 +1257,17 @@ form {
 		<div class="modal-content">
 			<h5>Shirt Press Type</h5>
 			<span class="close" onclick="closeForm('form-modal-add-data2')">&times;</span>
-			<form id="dynamic-form-pant-press-type"
+			<form id="dynamic-form-shirt-press-type"
 				onsubmit="handlePantPressTypeSubmit1(event)">
-				<div id="input-container-pant-press-type1" class="input-container">
+				<div id=input-container-shirt-press-type1" class="input-container">
 					<div class="input-group">
-						<input type="text" name="dynamicInput-pant-press-type1">
+						<input type="text" name="dynamicInput-shirt-press-type1">
 						<button type="button" class="add-button"
-							onclick="addInputForPantPressType1()">+</button>
+							onclick="addInputForShirtPressType1()">+</button>
 					</div>
 				</div>
 				<button type="submit" class="submit-button">Save</button>
-				<div id="message-pant-press-type1" class="message">Successfully
+				<div id="message-shirt-press-type1" class="message">Successfully
 					added</div>
 			</form>
 		</div>
@@ -1275,35 +1277,37 @@ form {
 
 	<!-- 	View Pocket Types list
  -->
-	<div id="form-modal-view-data3" class="modal">
+ 	<div id="form-shirt-view-data3" class="modal">
 		<div class="modal-content">
-			<h5>View Shirt Pocket Types</h5>
-			<span class="close" onclick="closeForm('form-modal-view-data3')">&times;</span>
-			<div id="view-data-container3" class="input-container">
+			<h5>View Shirt pocket Types</h5>
+			<span class="close" onclick="closeForm('form-shirt-view-data3')">&times;</span>
+			<div id="view-data-container2" class="input-container">
 				<!-- Data will be dynamically inserted here -->
 			</div>
 			<button type="button" class="submit-button"
 				onclick="openForm('form-modal-add-data3')">Add</button>
+
 			<button type="button" class="submit-button"
-				onclick="closeForm('form-modal-view-data3')">Close</button>
+				onclick="closeForm('form-shirt-view-data3')">Close</button>
 		</div>
 	</div>
+	
 
-	<div id="form-modal-add-data3" class="modal">
+	<div id="form-shirt-add-data3" class="modal">
 		<div class="modal-content">
 			<h5>Shirt Pocket Type</h5>
-			<span class="close" onclick="closeForm('form-modal-add-data3')">&times;</span>
+			<span class="close" onclick="closeForm('form-shirt-add-data3')">&times;</span>
 			<form id="dynamic-form-pocket-type"
 				onsubmit="handlePocketTypeSubmit1(event)">
-				<div id="input-container-pocket-type1" class="input-container">
+				<div id="input-container-shirt-pocket-type1" class="input-container">
 					<div class="input-group">
-						<input type="text" name="dynamicInput-pocket-type1">
+						<input type="text" name="dynamicInput-shirt-pocket-type1">
 						<button type="button" class="add-button"
-							onclick="addInputForPocketType1()">+</button>
+							onclick="addInputForShirtPocketType1()">+</button>
 					</div>
 				</div>
 				<button type="submit" class="submit-button">Save</button>
-				<div id="message-pocket-type1" class="message">Successfully
+				<div id="message-shirt-pocket-type1" class="message">Successfully
 					added</div>
 			</form>
 		</div>
@@ -1349,16 +1353,16 @@ form {
         }
 
         function showshirtViewDataPopup() {
-            showForm('form-modal-view-data');
+            showForm('form-shirt-view-data');
         }
         function showshirtViewDataPopup1() {
-            showForm('form-modal-view-data1');
+            showForm('form-shirt-view-data1');
         }
         function showshirtViewDataPopup2() {
-            showForm('form-modal-view-data2');
+            showForm('form-shirt-view-data2');
         } 
         function showshirtViewDataPopup3() {
-            showForm('form-modal-view-data3');
+            showForm('form-shirt-view-data3');
         }
         function closeForm(modalId) {
             document.getElementById(modalId).style.display = 'none';
@@ -1392,36 +1396,36 @@ form {
         
         
 
-        function addInputForPocketType() {
-            addInput('input-container-pocket-type', 'dynamicInput-pocket-type');
+        function addInputForShirtPocketType() {
+            addInput('input-container-shirt-pocket-type', 'dynamicInput-shirt-pocket-type');
         }
 
-        function addInputForPocketType1() {
-            addInput('input-container-pocket-type1', 'dynamicInput-pocket-type1');
+        function addInputForShirtPocketType1() {
+            addInput('input-container-shirt-pocket-type1', 'dynamicInput-shirt-pocket-type1');
         }
 
-        function addInputForPantType() {
-            addInput('input-container-pant-type', 'dynamicInput-pant-type');
+        function addInputForShirtType() {
+            addInput('input-container-shirt-type', 'dynamicInput-shirt-type');
         }
-        function addInputForPantType1() {
-            addInput('input-container-pant-type1', 'dynamicInput-pant-type1');
+        function addInputForShirtType1() {
+            addInput('input-container-shirt-type1', 'dynamicInput-shirt-type1');
         }
         
 
-        function addInputForPantPressType() {
-            addInput('input-container-pant-press-type', 'dynamicInput-pant-press-type');
+        function addInputForShirtPressType() {
+            addInput('input-container-shirt-press-type', 'dynamicInput-shirt-press-type');
         }
 
-        function addInputForPantPressType1() {
-            addInput('input-container-pant-press-type1', 'dynamicInput-pant-press-type1');
+        function addInputForShirtPressType1() {
+            addInput('input-container-shirt-press-type1', 'dynamicInput-shirt-press-type1');
         }
 
-        function addInputForPantTipType() {
-            addInput('input-container1', 'dynamicInput-pant-tip-type');
+        function addInputForShirtTipType() {
+            addInput('input-shirt-container1', 'dynamicInput-shirt-tip-type');
         }
         
-        function addInputForPantTipType1() {
-            addInput('input-container2', 'dynamicInput-pant-tip-type1');
+        function addInputForShirtTipType1() {
+            addInput('input-shirt-container2', 'dynamicInput-shirt-tip-type1');
         }
         
         
@@ -1433,11 +1437,11 @@ form {
 
         async function handlePocketTypeSubmit(event) {
             event.preventDefault();
-            const inputs = document.querySelectorAll('input[name="dynamicInput-pocket-type"]');
+            const inputs = document.querySelectorAll('input[name="dynamicInput-shirt-pocket-type"]');
             const data = Array.from(inputs).map(input => input.value);
 
             try {
-                const response = await fetch('/dropdowns/pockets', {
+                const response = await fetch('/dropdowns/shirt-pockets', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -1448,9 +1452,9 @@ form {
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message-pocket-type').style.display = 'block';
+                    document.getElementById('message-shirt-pocket-type').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message-pocket-type').style.display = 'none';
+                        document.getElementById('message-shirt-pocket-type').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -1462,11 +1466,11 @@ form {
         
         async function handlePocketTypeSubmit1(event) {
             event.preventDefault();
-            const inputs = document.querySelectorAll('input[name="dynamicInput-pocket-type1"]');
+            const inputs = document.querySelectorAll('input[name="dynamicInput-shirt-pocket-type1"]');
             const data = Array.from(inputs).map(input => input.value);
 
             try {
-                const response = await fetch('/dropdowns/pockets', {
+                const response = await fetch('/dropdowns/shirt-pockets', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -1477,9 +1481,9 @@ form {
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message-pocket-type1').style.display = 'block';
+                    document.getElementById('message-shirt-pocket-type1').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message-pocket-type1').style.display = 'none';
+                        document.getElementById('message-shirt-pocket-type1').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -1491,13 +1495,13 @@ form {
         
         
         
-        async function handlePantTypeSubmit(event) {
+        async function handlShirtTypeSubmit(event) {
             event.preventDefault();
-            const inputs = document.querySelectorAll('input[name="dynamicInput-pant-type"]');
+            const inputs = document.querySelectorAll('input[name="dynamicInput-shirt-type"]');
             const data = Array.from(inputs).map(input => input.value);
             console.log(data);
             try {
-                const response = await fetch('/dropdowns/pants', {
+                const response = await fetch('/dropdowns/shirts', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -1508,9 +1512,9 @@ form {
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message-pant-type').style.display = 'block';
+                    document.getElementById('message-shirt-type').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message-pant-type').style.display = 'none';
+                        document.getElementById('message-shirt-type').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -1524,13 +1528,13 @@ form {
 
 
        
-        async function handlePantTypeSubmit1(event) {
+        async function handlShirtTypeSubmit1(event) {
             event.preventDefault();
-            const inputs = document.querySelectorAll('input[name="dynamicInput-pant-type1"]');
+            const inputs = document.querySelectorAll('input[name="dynamicInput-shirt-type1"]');
             const data = Array.from(inputs).map(input => input.value);
             console.log(data);
             try {
-                const response = await fetch('/dropdowns/pants', {
+                const response = await fetch('/dropdowns/shirts', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -1541,9 +1545,9 @@ form {
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message-pant-type1').style.display = 'block';
+                    document.getElementById('message-shirt-type1').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message-pant-type1').style.display = 'none';
+                        document.getElementById('message-shirt-type1').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -1558,11 +1562,11 @@ form {
 
         async function handlePantPressTypeSubmit(event) {
             event.preventDefault();
-            const inputs = document.querySelectorAll('input[name="dynamicInput-pant-press-type"]');
+            const inputs = document.querySelectorAll('input[name="dynamicInput-shirt-press-type"]');
             const data = Array.from(inputs).map(input => input.value);
 
             try {
-                const response = await fetch('/dropdowns/pantpress', {
+                const response = await fetch('/dropdowns/shirtpress', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -1573,9 +1577,9 @@ form {
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message-pant-press-type').style.display = 'block';
+                    document.getElementById('message-shirt-press-type').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message-pant-press-type').style.display = 'none';
+                        document.getElementById('message-shirt-press-type').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -1589,11 +1593,11 @@ form {
         
         async function handlePantPressTypeSubmit1(event) {
             event.preventDefault();
-            const inputs = document.querySelectorAll('input[name="dynamicInput-pant-press-type1"]');
+            const inputs = document.querySelectorAll('input[name="dynamicInput-shirt-press-type1"]');
             const data = Array.from(inputs).map(input => input.value);
 
             try {
-                const response = await fetch('/dropdowns/pantpress', {
+                const response = await fetch('/dropdowns/shirtpress', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -1604,9 +1608,9 @@ form {
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message-pant-press-type1').style.display = 'block';
+                    document.getElementById('message-shirt-press-type1').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message-pant-press-type1').style.display = 'none';
+                        document.getElementById('message-shirt-press-type1').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -1621,11 +1625,11 @@ form {
         
         async function handlePantTipTypeSubmit(event) {
             event.preventDefault();
-            const inputs = document.querySelectorAll('input[name="dynamicInput-pant-tip-type"]');
+            const inputs = document.querySelectorAll('input[name="dynamicInput-shirt-tip-type"]');
             const data = Array.from(inputs).map(input => input.value);
             console.log(data);
             try {
-                const response = await fetch('/dropdowns/panttip', {
+                const response = await fetch('/dropdowns/shirt-tip-types', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -1636,9 +1640,9 @@ form {
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message-pant-tip-type').style.display = 'block';
+                    document.getElementById('message-shirt-tip-type').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message-pant-tip-type').style.display = 'none';
+                        document.getElementById('message-shirt-tip-type').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -1652,11 +1656,11 @@ form {
         
         async function handlePantTipTypeSubmit1(event) {
             event.preventDefault();
-            const inputs = document.querySelectorAll('input[name="dynamicInput-pant-tip-type1"]');
+            const inputs = document.querySelectorAll('input[name="dynamicInput-shirt-tip-type1"]');
             const data = Array.from(inputs).map(input => input.value);
             console.log(data);
             try {
-                const response = await fetch('/dropdowns/panttip', {
+                const response = await fetch('/dropdowns/shirt-tip-types', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -1667,9 +1671,9 @@ form {
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message-pant-tip-type1').style.display = 'block';
+                    document.getElementById('message-shirt-tip-type1').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message-pant-tip-type1').style.display = 'none';
+                        document.getElementById('message-shirt-tip-type1').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -1701,7 +1705,7 @@ form {
                     const data = await response.json();
                    console.log(data)
                     displayPantTypes(data);
-                    showForm('form-modal-view-data');
+                    showForm('form-shirt-view-data');
                 } else {
                     console.error('Error fetching pant types:', response.statusText);
                 }
@@ -1737,7 +1741,7 @@ form {
                     const data = await response.json();
                     console.log(data)
                     displayPantTipTypes(data);
-                    showForm('form-modal-view-data1');
+                    showForm('form-shirt-view-data1');
                 } else {
                     console.error('Error fetching pant types:', response.statusText);
                 }
@@ -1774,7 +1778,7 @@ form {
                     const data = await response.json();
                     console.log(data)
                     displayPantPressTypes(data);
-                    showForm('form-modal-view-data2');
+                    showForm('form-shirt-view-data2');
                 } else {
                     console.error('Error fetching pant types:', response.statusText);
                 }
@@ -1804,18 +1808,16 @@ form {
         
         
         
-        
-        
         async function showshirtViewDataPopup3() {
             try {
                 const response = await fetch('/dropdowns/pocket-types');
                 if (response.ok) {
                     const data = await response.json();
-                    displayPantPocketTypes(data);
-                    console.log(data)
-                    showForm('form-modal-view-data3');
+                    displayShirtPocketTypes(data);
+                    console.log(data);
+                    showForm('form-shirt-view-data3');
                 } else {
-                    console.error('Error fetching pant types:', response.statusText);
+                    console.error('Error fetching pocket types:', response.statusText);
                 }
             } catch (error) {
                 console.error('Error:', error);

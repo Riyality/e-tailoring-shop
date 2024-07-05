@@ -16,6 +16,9 @@ import com.tailoring.entity.PantPress;
 import com.tailoring.entity.PantTip;
 import com.tailoring.entity.PantType;
 import com.tailoring.entity.PocketType;
+import com.tailoring.entity.ShirtPocketType;
+import com.tailoring.entity.ShirtTip;
+import com.tailoring.entity.ShirtType;
 import com.tailoring.service.DropdownService;
 
 @Controller
@@ -29,6 +32,11 @@ public class DropdownController {
 	public String addDropdown() {
 		return "add";
 	}
+	
+	
+	
+	
+	
 
 	@PostMapping("/pockets")
 	@ResponseBody
@@ -42,6 +50,21 @@ public class DropdownController {
 		response.put("receivedData", inputs);
 		return response;
 		}
+	
+	
+	@PostMapping("/shirt-pockets")
+    @ResponseBody
+    public Map<String, Object> addShirtPocket(@RequestBody Map<String, List<String>> requestData) {
+        List<String> inputs = requestData.get("inputs");
+        System.out.println("Received inputs: " + inputs);
+        service.addShirtPocket(inputs);
+
+        Map<String, Object> response = new HashMap<>();
+        response.put("message", "Data received successfully ");
+        response.put("receivedData", inputs);
+        return response;
+    }
+	
 	
 	
 
@@ -72,6 +95,21 @@ public class DropdownController {
 		return response;
 	}
 	
+	
+
+	@PostMapping("/shirtpress")
+	@ResponseBody
+	public Map<String, Object> addShirtpress(@RequestBody Map<String, List<String>> requestData) {
+		List<String> presstype = requestData.get("inputs");
+		System.out.println("Received inputs: " + presstype);
+		service.addShirtpress(presstype);
+
+		Map<String, Object> response = new HashMap<>();
+		response.put("message", "Data received successfully");
+		response.put("receivedData", presstype);
+		return response;
+	}
+	
 	@PostMapping("/panttip")
 	@ResponseBody
 	public Map<String, Object> addPantTip(@RequestBody Map<String, List<String>> requestData) {
@@ -84,6 +122,43 @@ public class DropdownController {
 		response.put("receivedData", tiptype);
 		return response;
 	}
+	
+	
+	@PostMapping("/shirt-tip-types")
+	@ResponseBody
+	public Map<String, Object> addShirtTip(@RequestBody Map<String, List<String>> requestData) {
+		List<String> tiptype = requestData.get("inputs");
+		System.out.println("Received inputs: " + tiptype);
+		service.addShirtTip(tiptype);
+
+		Map<String, Object> response = new HashMap<>();
+		response.put("message", "Data received successfully");
+		response.put("receivedData", tiptype);
+		return response;
+	}
+	
+	
+
+    @PostMapping("/shirts")
+    @ResponseBody
+    public Map<String, Object> addShirt(@RequestBody Map<String, List<String>> requestData) {
+        List<String> stype = requestData.get("inputs");
+        System.out.println("Received inputs: " + stype);
+        service.addShirt(stype);
+
+        Map<String, Object> response = new HashMap<>();
+        response.put("message", "Data received successfully");
+        response.put("receivedData", stype);
+        return response;
+    }
+    
+    @GetMapping("/shirt-types")
+    @ResponseBody
+    public List<ShirtType> getShirtTypes() {
+        return service.getShirtTypes();
+    }
+
+	
 	@GetMapping("/pant-types")
 	@ResponseBody
 	public List<PantType> getPantTypes() {
@@ -97,19 +172,26 @@ public class DropdownController {
 	        return service.getPantTipTypes();
 	    }
 	 
+	 @GetMapping("/shirt-tip-types")
+	    @ResponseBody
+	    public List<ShirtTip> getShirtTipTypes() {
+		  System.out.println("1234"+service.getShirtTipTypes());
+	        return service.getShirtTipTypes();
+	    }
+	 
 	 @GetMapping("/pant-press-types")
 	    @ResponseBody
 	    public List<PantPress> getPantPressTypes() {
 	        return service.getPantPressTypes();
 	    }
 
-	    @GetMapping("/pocket-types")
+	 @GetMapping("/shirt-pocket-types")
 	    @ResponseBody
-	    public List<PocketType> getPocketTypes() {
-	        return service.getPocketTypes();
+	    public List<ShirtPocketType> getShirtPocketTypes() {
+	        return service.getShirtPocketTypes();
 	    }
-	
+	}
 
 	
 	
-}
+
