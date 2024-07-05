@@ -97,7 +97,10 @@
                         <i class="fas fa-chevron-down custom-select-icon"></i>
                     </div>
                 </div>
-            </div>
+                </div>
+                
+                
+                
 									
 					<div class="col-xl-12">
 					<button class="btn btn-primary" type="submit">Submit</button>
