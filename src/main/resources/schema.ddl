@@ -1,3 +1,6 @@
+create schema `tailoring`;
+use `tailoring`;
+
 CREATE TABLE `tailoring`.`customer` (
   `id` int NOT NULL AUTO_INCREMENT,
   `address` varchar(255) DEFAULT NULL,
