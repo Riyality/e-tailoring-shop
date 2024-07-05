@@ -150,6 +150,3 @@ CREATE TABLE `tailoring`.`pant_type` (
 ALTER TABLE `tailoring`.`shirt_type` 
 ADD COLUMN `rate` INT NULL AFTER `stype`;
 
-
-ALTER TABLE `tailoring`.`pant_type` 
-ADD COLUMN `rate` INT NULL AFTER `ptype`;
