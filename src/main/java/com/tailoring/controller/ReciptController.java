@@ -14,12 +14,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import contity;
 import com.tailoring.entity.PantPress;
 import com.tailoring.entity.PantTip;
 import com.tailoring.entity.PantType;
 import com.tailoring.entity.PocketType;
-import com.tailoring.entm.tailoring.entity.Customer;
+
 import com.tailoring.entity.PantDetailsEntity;
 import com.tailoring.entity.PantPress;
 import com.tailoring.entity.PantTip;
@@ -47,7 +46,7 @@ public class ReciptController {
 
 	@GetMapping( "/add_recipt" )
 	public String displayPage( @RequestParam String contact, Model model ) {
-		Customer customer = customerService.getByContact( contact );
+		com.tailoring.entity.Customer customer = customerService.getByContact( contact );
 		model.addAttribute( "customer", customer );
 
         List<PantType> pantTypeList = service.getPantTypes();
