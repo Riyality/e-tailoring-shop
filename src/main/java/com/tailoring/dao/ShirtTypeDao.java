@@ -11,5 +11,7 @@ import com.tailoring.entity.ShirtType;
 public interface ShirtTypeDao extends CrudRepository<ShirtType, Integer>{
 	
 	
+	
+	
 
 }

@@ -11,4 +11,5 @@ public interface ShirtPressTypeDao extends CrudRepository<ShirtPress, Integer> {
 
 	
 	
+	
 }

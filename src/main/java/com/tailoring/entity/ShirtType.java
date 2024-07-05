@@ -18,6 +18,7 @@ public class ShirtType {
 	@Column(name = "stype")
 	private String shirtType;
 
+	
 	public int getId() {
 		return id;
 	}

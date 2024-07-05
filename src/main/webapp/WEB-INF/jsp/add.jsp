@@ -19,6 +19,8 @@ body {
 	height: 1000px;
 }
 
+
+
 .button-container {
 	background-color: #fff;
 	padding: 10px;
@@ -1041,7 +1043,7 @@ form {
 					</div>
 				</div>
 				<button type="submit" class="submit-button">Save</button>
-				<div id="message-pant-type" class="message">Successfully added</div>
+				<div id="message-shirt-type" class="message">Successfully added</div>
 			</form>
 		</div>
 	</div>
@@ -1075,7 +1077,7 @@ form {
 					</div>
 				</div>
 				<button type="submit" class="submit-button">Save</button>
-				<div id="message-pant-tip-type" class="message">Successfully
+				<div id="message-shirt-tip-type" class="message">Successfully
 					added</div>
 			</form>
 		</div>
@@ -1110,7 +1112,7 @@ form {
 					</div>
 				</div>
 				<button type="submit" class="submit-button">Save</button>
-				<div id="message-pant-press-type" class="message">Successfully
+				<div id="message-shirt-press-type" class="message">Successfully
 					added</div>
 			</form>
 		</div>
@@ -1133,7 +1135,7 @@ form {
 	<div id="form-modal-shirt-pocket-type" class="modal">
 		<div class="modal-content">
 			<h5>Shirt Pocket Type</h5>
-			<span class="close" onclick="closeForm(form-modal-shirt-pocket-type')">&times;</span>
+			<span class="close" onclick="closeForm('form-modal-shirt-pocket-type')">&times;</span>
 			<form id="dynamic-form-pocket-type"
 				onsubmit="handlePocketTypeSubmit(event)">
 				<div id="input-container-shirt-pocket-type" class="input-container">
@@ -1144,7 +1146,7 @@ form {
 					</div>
 				</div>
 				<button type="submit" class="submit-button">Save</button>
-				<div id="message-pocket-type" class="message">Successfully
+				<div id="message-shirt-pocket-type" class="message">Successfully
 					added</div>
 			</form>
 		</div>
@@ -1186,7 +1188,7 @@ form {
 					</div>
 				</div>
 				<button type="submit" class="submit-button">Save</button>
-				<div id="message-pant-type1" class="message">Successfully
+				<div id="message-shirt-type1" class="message">Successfully
 					added</div>
 			</form>
 		</div>
@@ -1225,7 +1227,7 @@ form {
 					</div>
 				</div>
 				<button type="submit" class="submit-button">Save</button>
-				<div id="message-pant-tip-type1" class="message">Successfully
+				<div id="message-shirt-tip-type1" class="message">Successfully
 					added</div>
 			</form>
 		</div>
@@ -1265,7 +1267,7 @@ form {
 					</div>
 				</div>
 				<button type="submit" class="submit-button">Save</button>
-				<div id="message-pant-press-type1" class="message">Successfully
+				<div id="message-shirt-press-type1" class="message">Successfully
 					added</div>
 			</form>
 		</div>
@@ -1275,24 +1277,26 @@ form {
 
 	<!-- 	View Pocket Types list
  -->
-	<div id="form-shirt-view-data3" class="modal">
+ 	<div id="form-shirt-view-data3" class="modal">
 		<div class="modal-content">
-			<h5>View Shirt Pocket Types</h5>
+			<h5>View Shirt pocket Types</h5>
 			<span class="close" onclick="closeForm('form-shirt-view-data3')">&times;</span>
-			<div id="view-data-container3" class="input-container">
+			<div id="view-data-container2" class="input-container">
 				<!-- Data will be dynamically inserted here -->
 			</div>
 			<button type="button" class="submit-button"
 				onclick="openForm('form-modal-add-data3')">Add</button>
+
 			<button type="button" class="submit-button"
 				onclick="closeForm('form-shirt-view-data3')">Close</button>
 		</div>
 	</div>
+	
 
-	<div id="form-modal-add-data3" class="modal">
+	<div id="form-shirt-add-data3" class="modal">
 		<div class="modal-content">
 			<h5>Shirt Pocket Type</h5>
-			<span class="close" onclick="closeForm('form-modal-add-data3')">&times;</span>
+			<span class="close" onclick="closeForm('form-shirt-add-data3')">&times;</span>
 			<form id="dynamic-form-pocket-type"
 				onsubmit="handlePocketTypeSubmit1(event)">
 				<div id="input-container-shirt-pocket-type1" class="input-container">
@@ -1303,7 +1307,7 @@ form {
 					</div>
 				</div>
 				<button type="submit" class="submit-button">Save</button>
-				<div id="message-pocket-type1" class="message">Successfully
+				<div id="message-shirt-pocket-type1" class="message">Successfully
 					added</div>
 			</form>
 		</div>
@@ -1448,9 +1452,9 @@ form {
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message-pocket-type').style.display = 'block';
+                    document.getElementById('message-shirt-pocket-type').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message-pocket-type').style.display = 'none';
+                        document.getElementById('message-shirt-pocket-type').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -1477,9 +1481,9 @@ form {
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message-pocket-type1').style.display = 'block';
+                    document.getElementById('message-shirt-pocket-type1').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message-pocket-type1').style.display = 'none';
+                        document.getElementById('message-shirt-pocket-type1').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -1508,9 +1512,9 @@ form {
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message-pant-type').style.display = 'block';
+                    document.getElementById('message-shirt-type').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message-pant-type').style.display = 'none';
+                        document.getElementById('message-shirt-type').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -1541,9 +1545,9 @@ form {
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message-pant-type1').style.display = 'block';
+                    document.getElementById('message-shirt-type1').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message-pant-type1').style.display = 'none';
+                        document.getElementById('message-shirt-type1').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -1573,9 +1577,9 @@ form {
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message-pant-press-type').style.display = 'block';
+                    document.getElementById('message-shirt-press-type').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message-pant-press-type').style.display = 'none';
+                        document.getElementById('message-shirt-press-type').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -1604,9 +1608,9 @@ form {
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message-pant-press-type1').style.display = 'block';
+                    document.getElementById('message-shirt-press-type1').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message-pant-press-type1').style.display = 'none';
+                        document.getElementById('message-shirt-press-type1').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -1636,9 +1640,9 @@ form {
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message-pant-tip-type').style.display = 'block';
+                    document.getElementById('message-shirt-tip-type').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message-pant-tip-type').style.display = 'none';
+                        document.getElementById('message-shirt-tip-type').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -1667,9 +1671,9 @@ form {
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Success:', result);
-                    document.getElementById('message-pant-tip-type1').style.display = 'block';
+                    document.getElementById('message-shirt-tip-type1').style.display = 'block';
                     setTimeout(() => {
-                        document.getElementById('message-pant-tip-type1').style.display = 'none';
+                        document.getElementById('message-shirt-tip-type1').style.display = 'none';
                     }, 3000);
                 } else {
                     console.error('Error:', response.statusText);
@@ -1804,18 +1808,16 @@ form {
         
         
         
-        
-        
         async function showshirtViewDataPopup3() {
             try {
                 const response = await fetch('/dropdowns/pocket-types');
                 if (response.ok) {
                     const data = await response.json();
-                    displayPantPocketTypes(data);
-                    console.log(data)
+                    displayShirtPocketTypes(data);
+                    console.log(data);
                     showForm('form-shirt-view-data3');
                 } else {
-                    console.error('Error fetching pant types:', response.statusText);
+                    console.error('Error fetching pocket types:', response.statusText);
                 }
             } catch (error) {
                 console.error('Error:', error);

@@ -14,6 +14,7 @@ public class ShirtTip {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 private int id;
+
 	
 	@Column(name = "shirttiptype")
 private String shirttiptype;

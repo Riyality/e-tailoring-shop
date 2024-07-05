@@ -7,4 +7,5 @@ import com.tailoring.entity.ShirtTip;
 @Repository
 public interface ShirtTipTypeDao extends CrudRepository<ShirtTip, Integer> {
 
+	
 }

@@ -12,6 +12,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "shirt_press_type")
 public class ShirtPress {
+
 	
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
