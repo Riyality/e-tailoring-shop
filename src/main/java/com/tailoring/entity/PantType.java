@@ -7,6 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 @Entity
 @Table(name = "pant_type")
 public class PantType {
@@ -18,32 +23,6 @@ public class PantType {
 	@Column(name = "ptype")
 	private String pantType;
 	
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getPantType() {
-		return pantType;
-	}
-
-	public void setPantType(String pantType) {
-		this.pantType = pantType;
-	}
-
-	public PantType(int id, String pantType) {
-		super();
-		this.id = id;
-		this.pantType = pantType;
-	}
-
-	public PantType() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	private int rate;
 
 }
