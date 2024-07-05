@@ -60,7 +60,9 @@ public class DropdownService {
         List<PantType> list1 = new ArrayList<>();
         for (String input : ptype) {
             PantType t = new PantType();
-            t.setPantType(input);
+            String[] inpt = input.split("-");
+            t.setPantType(inpt[0].trim());
+            t.setRate(Integer.parseInt(inpt[1].trim()));
             list1.add(t);
         }
         pantTypeDao.saveAll(list1);
@@ -116,7 +118,9 @@ public class DropdownService {
 	    public void addShirt(List<String> stype) {
 	        for (String type : stype) {
 	            ShirtType shirtType = new ShirtType();
-	            shirtType.setShirtType(type);
+	            String[] inpt = type.split("-");
+	            shirtType.setShirtType(inpt[0].trim());
+	            shirtType.setRate(Integer.parseInt(inpt[1].trim()));
 	            shirttypeDao.save(shirtType);
 	        }
 	    }

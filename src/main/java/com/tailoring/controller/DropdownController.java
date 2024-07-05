@@ -33,11 +33,6 @@ public class DropdownController {
 		return "add";
 	}
 	
-	
-	
-	
-	
-
 	@PostMapping("/pockets")
 	@ResponseBody
 	public Map<String, Object> addPocket(@RequestBody Map<String, List<String>> requestData) {

@@ -8,8 +8,9 @@ import org.springframework.stereotype.Service;
 
 import com.tailoring.dao.CustomerDao;
 import com.tailoring.dao.ReceiptRepository;
+import com.tailoring.dto.PantRequestDto;
+import com.tailoring.dto.ShirtRequestDto;
 import com.tailoring.entity.Customer;
-import com.tailoring.entity.PantType;
 import com.tailoring.entity.Receipt;
 import com.tailoring.entity.ReceiptContainer;
 import com.tailoring.mapper.ReceiptMapper;
@@ -46,6 +47,7 @@ public class ReciptService {
 			entity.setCustomer( customer );
 			entity.setStatus( "Pending" );
 			entity.setAmount( receipt.getAmount() );
+			
 			entity.setPantDetailsEntity( receiptMapper.toPantEntity( receipt.getPantDetails() ) );
 			entity.setShirtDetailsEntity( receiptMapper.toShirtEntity( receipt.getShirtDetails() ) );
 			entity.getShirtDetailsEntity().setCustomer( customer );
