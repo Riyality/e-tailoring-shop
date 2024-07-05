@@ -69,3 +69,35 @@ CREATE TABLE `tailoring`.`receipt` (
   FOREIGN KEY (pant) REFERENCES pant_details(id),
   PRIMARY KEY (`id`));
   
+  
+  CREATE TABLE `shirt_pocket_type` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `shirt_pocket_type` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ;
+
+
+CREATE TABLE `shirt_press_type` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `shirt_press_type` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ;
+CREATE TABLE `shirt_tip_type` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `shirttiptype` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ;
+
+CREATE TABLE `shirt_type` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `stype` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+ALTER TABLE `tailoring`.`shirt_type` 
+ADD COLUMN `rate` INT NULL AFTER `stype`;
+
+
+ALTER TABLE `tailoring`.`pant_type` 
+ADD COLUMN `rate` INT NULL AFTER `ptype`;
