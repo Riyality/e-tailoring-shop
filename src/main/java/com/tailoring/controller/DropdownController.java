@@ -17,6 +17,7 @@ import com.tailoring.entity.PantTip;
 import com.tailoring.entity.PantType;
 import com.tailoring.entity.PocketType;
 import com.tailoring.entity.ShirtPocketType;
+import com.tailoring.entity.ShirtPress;
 import com.tailoring.entity.ShirtTip;
 import com.tailoring.entity.ShirtType;
 import com.tailoring.service.DropdownService;
@@ -157,6 +158,8 @@ public class DropdownController {
 	@GetMapping("/pant-types")
 	@ResponseBody
 	public List<PantType> getPantTypes() {
+		List<PantType> list = service.getPantTypes();
+		System.out.println(list);
 	    return service.getPantTypes();
 	}
 	
@@ -180,10 +183,22 @@ public class DropdownController {
 	        return service.getPantPressTypes();
 	    }
 
+	 
+	 @GetMapping("/shirt-press-types")
+	    @ResponseBody
+	    public List<ShirtPress> getShirtPressTypes() {
+	        return service.getShirtPressTypes();
+	    }
 	 @GetMapping("/shirt-pocket-types")
 	    @ResponseBody
 	    public List<ShirtPocketType> getShirtPocketTypes() {
 	        return service.getShirtPocketTypes();
+	    }
+	 
+	 @GetMapping("/pocket-types")
+	    @ResponseBody
+	    public List<PocketType> getPocketTypes() {
+	        return service.getPocketTypes();
 	    }
 	}
 

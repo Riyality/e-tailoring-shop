@@ -52,11 +52,12 @@ public class ReciptController {
 	@Autowired
 	private EmployeeService employeeservice;
 	
-	@GetMapping( "/add_recipt" )
-	public String displayPage( @RequestParam String contact, Model model ) {
-		com.tailoring.entity.Customer customer = customerService.getByContact( contact );
-		model.addAttribute( "customer", customer );
 
+    @GetMapping("/add_recipt")
+    public String displayPage(@RequestParam String contact, Model model) {
+        Customer customer = customerService.getByContact(contact);
+        model.addAttribute("customer", customer);
+        
         List<PantType> pantTypeList = service.getPantTypes();
         model.addAttribute("pantType", pantTypeList);
         

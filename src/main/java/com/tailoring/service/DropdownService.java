@@ -29,8 +29,8 @@ public class DropdownService {
     @Autowired
     private PantTypeDao pantTypeDao;
     
-  /*  @Autowired
-    private PantTipTypeDao pantTipTypeDao;*/
+   @Autowired
+    private PantTipTypeDao pantTipTypeDao;
 
     
     
@@ -38,6 +38,7 @@ public class DropdownService {
     @Autowired
     private PocketTypeDao pocketTypeDao;
 
+    
     @Autowired
     private PantPressTypeDao pantpressDao;
     
@@ -98,7 +99,7 @@ public class DropdownService {
 	        panttiptypeDao.saveAll(list2);
 }
 	public List<PantType> getPantTypes() {
-	    return (List<PantType>) pantTypeDao.findAll();
+	    return pantTypeDao.findAll();
 	}
 
 	 public List<PantTip> getPantTipTypes() {
@@ -126,7 +127,7 @@ public class DropdownService {
 	    }
 
 	    public List<ShirtType> getShirtTypes() {
-	        return (List<ShirtType>) shirttypeDao.findAll();
+	        return shirttypeDao.findAll();
 	    }
 
 		public List<ShirtTip> getShirtTipTypes() {
@@ -167,6 +168,10 @@ public class DropdownService {
 		    public List<ShirtPocketType> getShirtPocketTypes() {
 		        return (List<ShirtPocketType>) shirtpockettypedao.findAll();
 		    }
+
+			public List<ShirtPress> getShirtPressTypes() {
+				 return (List<ShirtPress>) shirtpresstypedao.findAll();
+			}
 		}
 		
 		

@@ -22,7 +22,7 @@ public class PantType {
 
 	@Column(name = "ptype")
 	private String pantType;
-	
+	@Column(name = "rate")
 	private int rate;
 
 }

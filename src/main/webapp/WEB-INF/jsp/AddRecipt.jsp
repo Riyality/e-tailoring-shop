@@ -111,6 +111,7 @@
 					</div>
 				</div>
 			</div>
+			</form>
 
 			<!-- <div class="radio">
 				<label>Select Your Type:</label><br> <label for="pant">

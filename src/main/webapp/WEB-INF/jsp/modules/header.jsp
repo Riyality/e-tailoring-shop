@@ -175,15 +175,12 @@ form {
 						</div>
 
 
-						<form action="/recipt/add_recipt">
-							<div class="input-group input-btn-outline mb-3">
-								<input type="text" class="form-control"
-									placeholder="e.g 8080851891" name="contact"
-									aria-label="Text input with dropdown button">
-								<button class="btn btn-primary dropdown-toggle" type="submit"
-									data-bs-toggle="dropdown" aria-expanded="false">Search</button>
-							</div>
-						</form>
+					<form action="/recipt/add_recipt" method="get">
+    <div class="input-group input-btn-outline mb-3">
+        <input type="text" class="form-control" placeholder="e.g 8080851891" name="contact" aria-label="Text input with dropdown button">
+        <button class="btn btn-primary dropdown-toggle" type="submit" aria-expanded="false">Search</button>
+    </div>
+</form>
 						<!-- <a aria-label="Hide Sidebar" class="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle" data-bs-toggle="sidebar" href="javascript:void(0);"><span></span></a> -->
 						<!-- End::header-link -->
 					</div>
