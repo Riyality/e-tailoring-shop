@@ -111,149 +111,161 @@
 					</div>
 				</div>
 			</div>
-			</form>
 
-			<!-- <div class="radio">
+		<!-- <div class="radio">
 				<label>Select Your Type:</label><br> <label for="pant">
 					<input type="radio" id="Pant" name="" value="Pant"> Pant
 				</label> <label for="Shirt"> <input type="radio" id="Shirt" name=""
 					value="Shirt"> Shirt
 				</label><br> <br> <br>
 			</div> -->
-			
-			<div class="form-check mb-2">
-		        <input class="form-checked-outline form-checked-secondary" type="radio" name="secondaryoutlineRadio" value="Shirt" id="Shirt">
-		        <label class="form-check-label" for="secondaryoutlineRadio">
-		            Shirt
-		        </label>
-		        
-		         <input class="form-checked-outline form-checked-secondary" type="radio" name="secondaryoutlineRadio" value="Pant" id="Pant">
-		        <label class="form-check-label" for="secondaryoutlineRadio">
-		            Pant
-		        </label>
-		    </div>
 
-			<!-- Start:: row-1 -->
+		<div class="form-check mb-2">
+			<input class="form-checked-outline form-checked-secondary"
+				type="radio" name="secondaryoutlineRadio" value="Shirt" id="Shirt">
+			<label class="form-check-label" for="secondaryoutlineRadio">
+				Shirt </label> <input class="form-checked-outline form-checked-secondary"
+				type="radio" name="secondaryoutlineRadio" value="Pant" id="Pant">
+			<label class="form-check-label" for="secondaryoutlineRadio">
+				Pant </label>
+		</div>
 
-			<div id="pant-form" class="hidden">
-				<div class="row">
-					<div class="col-xl-12">
-						<div class="card custom-card">
-							<div class="card-header justify-content-between">
-								<div class="card-title">Add Pant</div>
+		<!-- Start:: row-1 -->
+
+		<div id="pant-form" class="hidden">
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="card custom-card">
+						<div class="card-header justify-content-between">
+							<div class="card-title">Add Pant</div>
+						</div>
+						<div class="card-body">
+							<div class="col-xl-4">
+								<div class="mb-2">
+									<label for="panttype">Pant Type:</label> <select
+										name="pantType" class="form-control">
+										<c:forEach items="${pantType}" var="pant">
+											<option value="${pant.pantType}">${pant.pantType}</option>
+										</c:forEach>
+									</select>
+
+								</div>
 							</div>
-							<div class="card-body">
 
-								<label for="panttype">Pant Type:</label> <select name="pantType"
-									class="box">
-									<c:forEach items="${pantType}" var="pant">
-										<option value="${pant.pantType}">${pant.pantType}</option>
-									</c:forEach>
-								</select>
-
-									<label for="panttype">Pant Press:</label> <select name="pressType"
-									class="box">
-									<c:forEach items="${pantPress}" var="press">
-										<option value="${press.pressType}">${press.pressType}</option>
-									</c:forEach>
-								</select>
-
-								<div class="col-xl-4">
-									<div class="mb-2">
-										<label for="pantRate" class="form-label">Rate</label> <input
-											type="text" class="form-control" id="pantRate"
-											name="pantDetails.pantRate" placeholder="Rate">
-									</div>
+							<div class="col-xl-4">
+								<div class="mb-2">
+									<label for="panttype">Pant Press:</label> <select
+										name="pressType" class="form-control">
+										<c:forEach items="${pantPress}" var="press">
+											<option value="${press.pressType}">${press.pressType}</option>
+										</c:forEach>
+									</select>
 								</div>
-
-								<div class="col-xl-4">
-									<div class="mb-2">
-										<label for="pantQuantity" class="form-label">Quantity</label>
-										<input type="text" class="form-control" id="pantQuantity"
-											name="pantDetails.pantQuantity" placeholder="Quantity">
-									</div>
+							</div>
+							<div class="col-xl-4">
+								<div class="mb-2">
+									<label for="pantRate" class="form-label">Rate</label> <input
+										type="text" class="form-control" id="pantRate"
+										name="pantDetails.pantRate" placeholder="Rate">
 								</div>
+							</div>
 
-								<div class="col-xl-4">
-									<div class="mb-2">
-										<label for="pantShape" class="form-label">Shape</label> <input
-											type="text" class="form-control" id="pantShape"
-											name="pantDetails.pantShape" placeholder="Shape">
-									</div>
+							<div class="col-xl-4">
+								<div class="mb-2">
+									<label for="pantQuantity" class="form-label">Quantity</label> <input
+										type="text" class="form-control" id="pantQuantity"
+										name="pantDetails.pantQuantity" placeholder="Quantity">
 								</div>
+							</div>
 
+							<div class="col-xl-4">
+								<div class="mb-2">
+									<label for="pantShape" class="form-label">Shape</label> <input
+										type="text" class="form-control" id="pantShape"
+										name="pantDetails.pantShape" placeholder="Shape">
+								</div>
+							</div>
+
+							<div class="col-xl-4">
+								<div class="mb-2">
 									<label for="panttype">Pant tip:</label> <select name="tiptype"
-									class="box">
-									<c:forEach items="${pantTip}" var="tip">
-										<option value="${tip.tiptype}">${tip.tiptype}</option>
-									</c:forEach>
-								</select>
+										class="form-control">
+										<c:forEach items="${pantTip}" var="tip">
+											<option value="${tip.tiptype}">${tip.tiptype}</option>
+										</c:forEach>
+									</select>
 
-									<label for="panttype">pocket type:</label> <select name="pantPocket"
-									class="box">
-									<c:forEach items="${pocketType}" var="tip">
-										<option value="${tip.type}">${tip.type}</option>
-									</c:forEach>
-								</select>
+								</div>
+							</div>
 
-								<div class="row">
-									<div class="col">
-										<div class="mb-3">
-											<label for="pantHeight" class="form-label">Height</label> <input
-												type="text" class="form-control" id="pantHeight"
-												name="pantDetails.pantHeight" placeholder="Height">
-										</div>
-									</div>
-									<div class="col">
-										<div class="mb-3">
-											<label for="pantWaist" class="form-label">Waist</label> <input
-												type="text" class="form-control" id="pantWaist"
-												name="pantDetails.pantWaist" placeholder="Waist">
-										</div>
-									</div>
-									<div class="col">
-										<div class="mb-3">
-											<label for="pantSeat" class="form-label">Seat</label> <input
-												type="text" class="form-control" id="pantSeat"
-												name="pantDetails.pantSeat" placeholder="Seat">
-										</div>
-									</div>
-									<div class="col">
-										<div class="mb-3">
-											<label for="pantThigh" class="form-label">Thigh</label> <input
-												type="text" class="form-control" id="pantThigh"
-												name="pantDetails.pantThigh" placeholder="Thigh">
-										</div>
-									</div>
-									<div class="col">
-										<div class="mb-3">
-											<label for="pantKnee" class="form-label">Knee</label> <input
-												type="text" class="form-control" id="pantKnee"
-												name="pantDetails.pantKnee" placeholder="Knee">
-										</div>
-									</div>
-									<div class="col">
-										<div class="mb-3">
-											<label for="pantLegsBottom" class="form-label">Bottom</label>
-											<input type="text" class="form-control" id="pantLegsBottom"
-												name="pantDetails.pantLegsBottom" placeholder="Bottom">
-										</div>
+							<div class="col-xl-4">
+								<div class="mb-2">
+									<label for="panttype">pocket type:</label> <select
+										name="pantPocket" class="form-control">
+										<c:forEach items="${pocketType}" var="tip">
+											<option value="${tip.type}">${tip.type}</option>
+										</c:forEach>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="mb-3">
+										<label for="pantHeight" class="form-label">Height</label> <input
+											type="text" class="form-control" id="pantHeight"
+											name="pantDetails.pantHeight" placeholder="Height">
 									</div>
 								</div>
-
-								<div>
+								<div class="col">
 									<div class="mb-3">
-										<label for="pantOther" class="form-label">Other</label> <input
-											type="text" class="form-control" id="pantOther"
-											name="pantDetails.pantOther" placeholder="Other">
+										<label for="pantWaist" class="form-label">Waist</label> <input
+											type="text" class="form-control" id="pantWaist"
+											name="pantDetails.pantWaist" placeholder="Waist">
 									</div>
+								</div>
+								<div class="col">
+									<div class="mb-3">
+										<label for="pantSeat" class="form-label">Seat</label> <input
+											type="text" class="form-control" id="pantSeat"
+											name="pantDetails.pantSeat" placeholder="Seat">
+									</div>
+								</div>
+								<div class="col">
+									<div class="mb-3">
+										<label for="pantThigh" class="form-label">Thigh</label> <input
+											type="text" class="form-control" id="pantThigh"
+											name="pantDetails.pantThigh" placeholder="Thigh">
+									</div>
+								</div>
+								<div class="col">
+									<div class="mb-3">
+										<label for="pantKnee" class="form-label">Knee</label> <input
+											type="text" class="form-control" id="pantKnee"
+											name="pantDetails.pantKnee" placeholder="Knee">
+									</div>
+								</div>
+								<div class="col">
+									<div class="mb-3">
+										<label for="pantLegsBottom" class="form-label">Bottom</label>
+										<input type="text" class="form-control" id="pantLegsBottom"
+											name="pantDetails.pantLegsBottom" placeholder="Bottom">
+									</div>
+								</div>
+							</div>
+
+							<div>
+								<div class="mb-3">
+									<label for="pantOther" class="form-label">Other</label> <input
+										type="text" class="form-control" id="pantOther"
+										name="pantDetails.pantOther" placeholder="Other">
 								</div>
 							</div>
 						</div>
-						<div class="card-footer d-none border-top-0"></div>
 					</div>
+					<div class="card-footer d-none border-top-0"></div>
 				</div>
 			</div>
+		</div>
 	</div>
 
 	<div id="shirt-form" class="hidden">
@@ -267,16 +279,23 @@
 						<div class="row">
 							<div class="col-xl-6">
 								<div class="mb-3">
-									<label for="shirtType" class="form-label">Shirt Type</label> <input
-										type="text" class="form-control" id="shirtType"
-										name="shirtDetails.shirtType" placeholder="Shirt Type">
+									<label for="shirtType" class="form-label">Shirt Type</label> <select
+										name="shirtDetails.shirtType" class="form-control">
+										<c:forEach items="${shirtTypes}" var="tip">
+											<option value="${tip.shirtType}">${tip.shirtType}</option>
+										</c:forEach>
+									</select>
 								</div>
 							</div>
 							<div class="col-xl-6">
 								<div class="mb-3">
 									<label for="shirtPress" class="form-label">Shirt Press</label>
-									<input type="text" class="form-control" id="shirtPress"
-										name="shirtDetails.shirtPress" placeholder="Shirt Press">
+
+									<select name="shirtDetails.shirtPress" class="form-control">
+										<c:forEach items="${shirtPressTypes}" var="tip">
+											<option value="${tip.shirtpressType}">${tip.shirtpressType}</option>
+										</c:forEach>
+									</select>
 								</div>
 							</div>
 							<div class="col-xl-4">
