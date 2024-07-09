@@ -46,8 +46,18 @@ public class ReciptService {
 			}
 			entity.setCustomer( customer );
 			entity.setStatus( "Pending" );
-			entity.setAmount( receipt.getAmount() );
-			
+
+			PantRequestDto pant = receipt.getPantDetails();
+			ShirtRequestDto shirt = receipt.getShirtDetails();
+			float totalAmount = 0;
+			if ( pant != null ) {
+				totalAmount = Float.parseFloat( pant.getPantRate() ) * Float.parseFloat( pant.getPantQuantity() );
+			}
+			if ( shirt != null ) {
+				totalAmount = totalAmount + ( Float.parseFloat( shirt.getShirtRate() ) * Float.parseFloat( shirt.getShirtQuantity() ) );
+			}
+			entity.setAmount( totalAmount );
+
 			entity.setPantDetailsEntity( receiptMapper.toPantEntity( receipt.getPantDetails() ) );
 			entity.setShirtDetailsEntity( receiptMapper.toShirtEntity( receipt.getShirtDetails() ) );
 			entity.getShirtDetailsEntity().setCustomer( customer );
@@ -63,6 +73,7 @@ public class ReciptService {
 	public Long findMaxReceiptId() {
 		return receiptRepository.findMaxId();
 	}
+
 	public List<Receipt> getPendingAmount() {
 		return receiptRepository.findAll();
 	}
