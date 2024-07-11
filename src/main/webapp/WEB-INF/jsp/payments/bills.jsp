@@ -44,45 +44,38 @@
 
 				<tr>
 					<th>Name</th>
-					<th>Contact</th>
-					<th>Address</th>
 					<th>Payment</th>
-					<th>Payment Paid</th>
 					<th>Payment Pending</th>
+					<th>Shirts</th>
+					<th>Pants</th>
 					<th>Status</th>
-					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="customer" items="${list}">
+				<c:forEach var="receipt" items="${list}">
 					<tr>
 						<td>
 							<div class="d-flex align-items-center">
-								<div class="avatar-circle">${fn:toUpperCase(fn:substring(customer.name, 0, 1))}</div>
+								<div class="avatar-circle">${fn:toUpperCase(fn:substring(receipt.customer.name, 0, 1))}</div>
 								<div style="margin-left: 10px;">
 									<div>
-										<span>${customer.name}</span>
+										<span>${receipt.customer.name}</span>
 									</div>
 									<div>
-										<span class="text-muted">${customer.email}</span>
+										<span class="text-muted">${receipt.customer.contact}</span>
 									</div>
 								</div>
 							</div>
 						</td>
-						<td>${customer.contact}</td>
-						<td>${customer.address}</td>
-						<td>${customer.payment}</td>
-						<td>${customer.payment_paid}</td>
-						<td>${customer.payment_pending}</td>
-						<td><span class="badge bg-success text-light">${customer.status}</span></td>
-						<td><a
-							href="${pageContext.request.contextPath}/customers/update_customer?id=${customer.id}"
-							title="Update"> <i class="fas fa-pencil-alt"
-								style="color: blue;"></i>
-						</a> &nbsp; &nbsp; <a href="javascript:void(0);"
-							onclick="confirmDelete(${customer.id})" title="Delete"> <i
-								class="fas fa-trash" style="color: red;"></i>
-						</a>&nbsp; &nbsp; <a href="${pageContext.request.contextPath}/customers/bills?id=${customer.id}">Bills</a></td>
+						<td>${receipt.amount}</td>
+						<td>${receipt.pendingAmount}</td>
+						<td>${receipt.shirtDetailsEntity.shirtQuantity}
+							<button type="button" class="btn btn-primary btn-sm">Assign</button>
+						</td>
+						<td>${receipt.pantDetailsEntity.pantQuantity}
+							<button type="button" class="btn btn-primary btn-sm">Assign</button>
+						</td>
+						<td><span class="badge bg-success text-light">${receipt.status}</span></td>
 					</tr>
 				</c:forEach>
 			</tbody>
@@ -90,13 +83,6 @@
 	</div>
 </div>
 
-<script>
-        function confirmDelete(id) {
-            if (confirm('Are you sure you want to delete this record?')) {
-                window.location.href = '${pageContext.request.contextPath}/customers/deletecustomer?id=' + id;
-            }
-        }
-    </script>
 
 <jsp:include page="../modules/footer.jsp" />
 

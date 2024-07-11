@@ -12,65 +12,74 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tailoring.entity.Customer;
+import com.tailoring.entity.Receipt;
 import com.tailoring.service.CustomerService;
 
 @Controller
-@RequestMapping("/customers")
+@RequestMapping( "/customers" )
 public class CustomerController {
 	@Autowired
 	private CustomerService customerservice;
 
-	@GetMapping("/add_customer_form")
+	@GetMapping( "/add_customer_form" )
 	public String displayPage() {
 		return "customers/add";
 
 	}
 
-	@PostMapping("/addCustomer")
-	public String addrecord(@ModelAttribute Customer customer, Model model) {
-		customerservice.addcustomerrecord(customer);
+	@PostMapping( "/addCustomer" )
+	public String addrecord( @ModelAttribute Customer customer, Model model ) {
+		customerservice.addcustomerrecord( customer );
 		List<Customer> list = customerservice.allcustomerrecord();
-		model.addAttribute("list", list);
+		model.addAttribute( "list", list );
 		return "customers/list";
 	}
 
-	@GetMapping("/allcustomer")
-	public String allcustomer(Model model) {
+	@GetMapping( "/allcustomer" )
+	public String allcustomer( Model model ) {
 		List<Customer> list = customerservice.allcustomerrecord();
-		model.addAttribute("list", list);
+		model.addAttribute( "list", list );
 		return "customers/list";
 
 	}
 
-	@GetMapping("/update_customer")
-	public String update(@RequestParam int id, Model model) {
-		Customer customer = customerservice.findbyid(id);
-		model.addAttribute("customer", customer);
+	@GetMapping( "/update_customer" )
+	public String update( @RequestParam int id, Model model ) {
+		Customer customer = customerservice.findbyid( id );
+		model.addAttribute( "customer", customer );
 		return "customers/edit";
 
 	}
 
-	@PostMapping(value = "/updatecustomer")
-	public String updateCustomer(@ModelAttribute Customer customer, Model model) {
-		customerservice.updatecustomerrecord(customer);
+	@PostMapping( value = "/updatecustomer" )
+	public String updateCustomer( @ModelAttribute Customer customer, Model model ) {
+		customerservice.updatecustomerrecord( customer );
 		List<Customer> list = customerservice.allcustomerrecord();
-		model.addAttribute("list", list);
+		model.addAttribute( "list", list );
 		return "customers/list";
 	}
 
-	@GetMapping("/deletecustomer")
-	public String deleteCustomerById(@RequestParam int id, Model model) {
-		customerservice.deletecustomerrecord(id);
+	@GetMapping( "/deletecustomer" )
+	public String deleteCustomerById( @RequestParam int id, Model model ) {
+		customerservice.deletecustomerrecord( id );
 		List<Customer> list = customerservice.allcustomerrecord();
-		model.addAttribute("list", list);
+		model.addAttribute( "list", list );
 		return "customers/list";
 	}
 
-	@GetMapping("/byname")
-	public String getCustomersByName(@RequestParam String name, Model model) {
-		List<Customer> list = customerservice.getCustomersByName(name);
-		model.addAttribute("list", list);
+	@GetMapping( "/byname" )
+	public String getCustomersByName( @RequestParam String name, Model model ) {
+		List<Customer> list = customerservice.getCustomersByName( name );
+		model.addAttribute( "list", list );
 		return "customers/list";
+
+	}
+
+	@GetMapping( "/bills" )
+	public String getCustomersByName( @RequestParam int id, Model model ) {
+		List<Receipt> list = customerservice.getCustomersPendingBills( id );
+		model.addAttribute( "list", list );
+		return "payments/bills";
 
 	}
 }
