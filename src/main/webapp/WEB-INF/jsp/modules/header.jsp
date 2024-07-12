@@ -94,9 +94,6 @@
 	display: block;
 }
 
-form {
-	margin-left: 70px; /
-}
 </style>
 
 </head>
@@ -158,31 +155,30 @@ form {
 						<!-- End::header-link -->
 					</div>
 					<!-- End::header-element -->
-					<div class="header-element">1
+					<div class="header-element">
 						<!-- Start::header-link -->
 
-
-
-						<div class="form-container">
+						<div class="row">
+							<div class="col-6">
 							<form action="/customers/byname" method="get">
 								<div class="input-group mb-3">
-									<input type="text" class="form-control"
+									<input type="text" class="form-control form-control-sm"
 										placeholder="Enter customer name" name="name"
 										aria-label="Text input with dropdown button">
 									<button class="btn btn-secondary" type="submit">Search</button>
 								</div>
 							</form>
+							</div>
+		
+							<div class="col-6">
+							<form action="/recipt/add_recipt" method="get">
+							    <div class="input-group input-btn-outline mb-3">
+							        <input type="text" class="form-control form-control-sm" placeholder="e.g 8080851891" name="contact" aria-label="Text input with dropdown button">
+							        <button class="btn btn-primary dropdown-toggle" type="submit" aria-expanded="false">Search</button>
+							    </div>
+							</form>
 						</div>
-
-
-					<form action="/recipt/add_recipt" method="get">
-    <div class="input-group input-btn-outline mb-3">
-        <input type="text" class="form-control" placeholder="e.g 8080851891" name="contact" aria-label="Text input with dropdown button">
-        <button class="btn btn-primary dropdown-toggle" type="submit" aria-expanded="false">Search</button>
-    </div>
-</form>
-						<!-- <a aria-label="Hide Sidebar" class="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle" data-bs-toggle="sidebar" href="javascript:void(0);"><span></span></a> -->
-						<!-- End::header-link -->
+					   </div>
 					</div>
 
 				</div>
@@ -241,7 +237,7 @@ form {
 				<!-- Start::nav -->
 				<nav class="main-menu-container nav nav-pills flex-column sub-open">
 					<div class="slide-left" id="slide-left"></div>
-					<ul class="main-menu">
+					<ul class="main-menu">-++
 						<!-- Start::slide__category -->
 						<li class="slide__category"><span class="category-name">Riyality
 								Softwares</span></li>
@@ -355,14 +351,6 @@ form {
 				</script>
 
 
-
-
-
-
-
-
-
-
 				<!-- End::nav -->
 
 			</div>
@@ -371,3 +359,7 @@ form {
 		</aside>
 
 		<!-- End Main-Sidebar-->
+		
+		
+<!-- Start::app-content -->
+<div class="main-content app-content">

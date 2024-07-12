@@ -2,7 +2,6 @@
 
 
  <!-- Start::app-content -->
- <div class="main-content app-content">
 	<div class="container-fluid my-5">
 
 
@@ -96,7 +95,6 @@
 		</div>
 
 	</div>
-</div> 
  
 <!-- End::app-content -->
 
