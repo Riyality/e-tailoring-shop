@@ -2,7 +2,6 @@
 
 
 <!-- Start::app-content -->
-<div class="main-content app-content">
 	<div class="container-fluid my-5">
 
 
@@ -13,7 +12,7 @@
 			<div class="col-xl-12">
 				<div class="card custom-card">
 					<div class="card-header justify-content-between">
-						<div class="card-title"><h4>Add Employee</h4></div>
+						<div class="card-title">Add Customer</div>
 					</div>
 					<div class="card-body">
 					<form action="/employees/add" method="post">
